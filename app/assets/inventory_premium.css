@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Main Premium Scoped Container */
+.inv-premium-page {
+    font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    background-color: #F5F2EB !important; /* Soft premium beige */
+    min-height: 100vh;
+    padding: 24px 30px !important;
+    color: #1C1B19 !important; /* Rich charcoal black */
+}
+
+/* Page titles */
+.inv-premium-page h1, 
+.inv-premium-page h2, 
+.inv-premium-page h3, 
+.inv-premium-page h4, 
+.inv-premium-page h5, 
+.inv-premium-page h6 {
+    font-family: 'Outfit', sans-serif !important;
+    color: #1C1B19 !important;
+    font-weight: 700 !important;
+}
+
+/* Premium styled cards */
+.inv-premium-card {
+    background-color: #FFFFFF !important; /* Pure white contrast */
+    border: 1px solid #E3DFD5 !important; /* Soft beige border */
+    border-radius: 12px !important;
+    box-shadow: 0 4px 20px rgba(28, 27, 25, 0.03) !important;
+    margin-bottom: 24px !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.inv-premium-card:hover {
+    box-shadow: 0 8px 30px rgba(28, 27, 25, 0.06) !important;
+}
+
+/* Card Header */
+.inv-premium-card .card-header {
+    background-color: #FAF9F6 !important;
+    border-bottom: 1px solid #E3DFD5 !important;
+    padding: 16px 20px !important;
+}
+
+.inv-premium-card .card-body {
+    padding: 20px !important;
+}
+
+/* Premium Muted Gold/Antique Button Styles */
+.inv-btn-gold {
+    background: linear-gradient(135deg, #C5A059 0%, #B38F48 100%) !important;
+    border: none !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 10px rgba(197, 160, 89, 0.2) !important;
+    transition: all 0.2s ease !important;
+}
+
+.inv-btn-gold:hover {
+    background: linear-gradient(135deg, #D4B26F 0%, #C5A059 100%) !important;
+    box-shadow: 0 6px 15px rgba(197, 160, 89, 0.3) !important;
+    transform: translateY(-1px);
+    color: #FFFFFF !important;
+}
+
+.inv-btn-dark {
+    background-color: #1C1B19 !important;
+    border: 1px solid #1C1B19 !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    transition: all 0.2s ease !important;
+}
+
+.inv-btn-dark:hover {
+    background-color: #33312C !important;
+    border-color: #33312C !important;
+    color: #FFFFFF !important;
+}
+
+/* Dropdown styling wrapper overrides */
+.inv-premium-page div[class*="Select-control"],
+.inv-premium-page div[class*="Select__control"] {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E3DFD5 !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    color: #1C1B19 !important;
+}
+
+.inv-premium-page div[class*="Select"],
+.inv-premium-page div[class*="Select"] *,
+.inv-premium-page span[class*="Select"],
+.inv-premium-page span[class*="Select"] *,
+.inv-premium-page input[class*="Select"],
+.inv-premium-page .dash-dropdown,
+.inv-premium-page .dash-dropdown * {
+    color: #1C1B19 !important;
+}
+
+.inv-premium-page div[class*="placeholder"],
+.inv-premium-page span[class*="placeholder"] {
+    color: #A19D94 !important;
+}
+
+.inv-premium-page div[class*="Select-menu-outer"],
+.inv-premium-page div[class*="Select__menu"] {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E3DFD5 !important;
+    border-radius: 8px !important;
+    z-index: 1000 !important;
+}
+
+.inv-premium-page div[class*="Select-option"],
+.inv-premium-page div[class*="Select__option"] {
+    background-color: #FFFFFF !important;
+    color: #1C1B19 !important;
+    padding: 10px 14px !important;
+}
+
+.inv-premium-page div[class*="Select-option"][class*="focused"],
+.inv-premium-page div[class*="Select__option"][class*="focused"] {
+    background-color: #FAF9F6 !important;
+    color: #C5A059 !important;
+}
+
+.inv-premium-page div[class*="Select-option"][class*="selected"],
+.inv-premium-page div[class*="Select__option"][class*="selected"] {
+    background-color: #FAF2DF !important;
+    color: #1C1B19 !important;
+    font-weight: 600 !important;
+}
+
+/* Pills for multi-select */
+.inv-premium-page div[class*="Select-value"],
+.inv-premium-page div[class*="Select__multi-value"] {
+    background-color: #FAF9F6 !important;
+    border: 1px solid #E3DFD5 !important;
+    border-radius: 4px !important;
+}
+
+/* Date Picker Overrides for Beige Theme */
+.inv-premium-page .DateRangePickerInput,
+.inv-premium-page .DateRangePickerInput_1 {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E3DFD5 !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+    display: flex !important;
+    align-items: center;
+}
+
+.inv-premium-page .DateInput,
+.inv-premium-page .DateInput_1 {
+    background: #FFFFFF !important;
+}
+
+.inv-premium-page .DateInput_input,
+.inv-premium-page .DateInput_input_1 {
+    background: #FFFFFF !important;
+    color: #1C1B19 !important;
+    font-size: 13px !important;
+    padding: 8px 12px !important;
+    height: 36px !important;
+    border-bottom: none !important;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+}
+
+.inv-premium-page .DateRangePickerInput_arrow,
+.inv-premium-page .DateRangePickerInput_arrow_1 {
+    color: #C5A059 !important;
+}
+
+/* Styled Scrollbars inside page */
+.inv-premium-page ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.inv-premium-page ::-webkit-scrollbar-track {
+    background: #F5F2EB;
+}
+.inv-premium-page ::-webkit-scrollbar-thumb {
+    background: #D4CEBF;
+    border-radius: 3px;
+}
+.inv-premium-page ::-webkit-scrollbar-thumb:hover {
+    background: #C5A059;
+}
+
+/* Deep Red Theme */
+.inv-premium-page-red {
+    font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    background: linear-gradient(135deg, #7A1515 0%, #4A0E0E 50%, #2A0505 100%) !important;
+    min-height: 100vh;
+    padding: 24px 30px !important;
+    color: #FFFFFF !important;
+}
+
+.inv-premium-page-red h1, 
+.inv-premium-page-red h2, 
+.inv-premium-page-red h3, 
+.inv-premium-page-red h4, 
+.inv-premium-page-red h5, 
+.inv-premium-page-red h6 {
+    font-family: 'Outfit', sans-serif !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+}
+
+/* Red theme dropdown and date picker overrides (identical to beige page, but scoped to red container) */
+.inv-premium-page-red div[class*="Select-control"],
+.inv-premium-page-red div[class*="Select__control"] {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E3DFD5 !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    color: #1C1B19 !important;
+}
+
+.inv-premium-page-red div[class*="Select"],
+.inv-premium-page-red div[class*="Select"] *,
+.inv-premium-page-red span[class*="Select"],
+.inv-premium-page-red span[class*="Select"] *,
+.inv-premium-page-red input[class*="Select"],
+.inv-premium-page-red .dash-dropdown,
+.inv-premium-page-red .dash-dropdown * {
+    color: #1C1B19 !important;
+}
+
+.inv-premium-page-red div[class*="placeholder"],
+.inv-premium-page-red span[class*="placeholder"] {
+    color: #A19D94 !important;
+}
+
+.inv-premium-page-red div[class*="Select-menu-outer"],
+.inv-premium-page-red div[class*="Select__menu"] {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E3DFD5 !important;
+    border-radius: 8px !important;
+    z-index: 1000 !important;
+}
+
+.inv-premium-page-red div[class*="Select-option"],
+.inv-premium-page-red div[class*="Select__option"] {
+    background-color: #FFFFFF !important;
+    color: #1C1B19 !important;
+    padding: 10px 14px !important;
+}
+
+.inv-premium-page-red div[class*="Select-option"][class*="focused"],
+.inv-premium-page-red div[class*="Select__option"][class*="focused"] {
+    background-color: #FAF9F6 !important;
+    color: #C5A059 !important;
+}
+
+.inv-premium-page-red div[class*="Select-option"][class*="selected"],
+.inv-premium-page-red div[class*="Select__option"][class*="selected"] {
+    background-color: #FAF2DF !important;
+    color: #1C1B19 !important;
+    font-weight: 600 !important;
+}
+
+.inv-premium-page-red div[class*="Select-value"],
+.inv-premium-page-red div[class*="Select__multi-value"] {
+    background-color: #FAF9F6 !important;
+    border: 1px solid #E3DFD5 !important;
+    border-radius: 4px !important;
+}
+
+.inv-premium-page-red .DateRangePickerInput,
+.inv-premium-page-red .DateRangePickerInput_1,
+.inv-premium-page-red .SingleDatePickerInput,
+.inv-premium-page-red .SingleDatePickerInput_1,
+.inv-premium-page-red .SingleDatePickerInput__withBorder {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E3DFD5 !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+    display: flex !important;
+    align-items: center;
+}
+
+.inv-premium-page-red .DateInput,
+.inv-premium-page-red .DateInput_1 {
+    background: #FFFFFF !important;
+}
+
+.inv-premium-page-red .DateInput_input,
+.inv-premium-page-red .DateInput_input_1 {
+    background: #FFFFFF !important;
+    color: #1C1B19 !important;
+    font-size: 13px !important;
+    padding: 8px 12px !important;
+    height: 36px !important;
+    border-bottom: none !important;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+}
+
+.inv-premium-page-red .DateRangePickerInput_arrow,
+.inv-premium-page-red .DateRangePickerInput_arrow_1 {
+    color: #C5A059 !important;
+}
+
+.inv-premium-page-red ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.inv-premium-page-red ::-webkit-scrollbar-track {
+    background: #1F0303;
+}
+.inv-premium-page-red ::-webkit-scrollbar-thumb {
+    background: #5A0B0B;
+    border-radius: 3px;
+}
+.inv-premium-page-red ::-webkit-scrollbar-thumb:hover {
+    background: #C5A059;
+}
+
+/* Rich Gold Gradient Theme for Jewelry Company Dashboard */
+.inv-premium-page-gold {
+    font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    background: linear-gradient(135deg, #F9F7F1 0%, #E6D8BE 40%, #CDB37F 80%, #A68748 100%) !important;
+    min-height: 100vh;
+    padding: 24px 30px !important;
+    color: #1C1B19 !important;
+}
+
+.inv-premium-page-gold h1, 
+.inv-premium-page-gold h2, 
+.inv-premium-page-gold h3, 
+.inv-premium-page-gold h4, 
+.inv-premium-page-gold h5, 
+.inv-premium-page-gold h6 {
+    font-family: 'Outfit', sans-serif !important;
+    color: #1C1B19 !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+}
+
+/* Gold theme dropdown and date picker overrides */
+.inv-premium-page-gold div[class*="Select-control"],
+.inv-premium-page-gold div[class*="Select__control"] {
+    background-color: #FFFFFF !important;
+    border: 1px solid #C5A059 !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    color: #1C1B19 !important;
+}
+
+.inv-premium-page-gold div[class*="Select"],
+.inv-premium-page-gold div[class*="Select"] *,
+.inv-premium-page-gold span[class*="Select"],
+.inv-premium-page-gold span[class*="Select"] *,
+.inv-premium-page-gold input[class*="Select"],
+.inv-premium-page-gold .dash-dropdown,
+.inv-premium-page-gold .dash-dropdown * {
+    color: #1C1B19 !important;
+}
+
+.inv-premium-page-gold div[class*="placeholder"],
+.inv-premium-page-gold span[class*="placeholder"] {
+    color: #A19D94 !important;
+}
+
+.inv-premium-page-gold div[class*="Select-menu-outer"],
+.inv-premium-page-gold div[class*="Select__menu"] {
+    background-color: #FFFFFF !important;
+    border: 1px solid #C5A059 !important;
+    border-radius: 8px !important;
+    z-index: 1000 !important;
+}
+
+.inv-premium-page-gold div[class*="Select-option"],
+.inv-premium-page-gold div[class*="Select__option"] {
+    background-color: #FFFFFF !important;
+    color: #1C1B19 !important;
+    padding: 10px 14px !important;
+}
+
+.inv-premium-page-gold div[class*="Select-option"][class*="focused"],
+.inv-premium-page-gold div[class*="Select__option"][class*="focused"] {
+    background-color: #FAF9F6 !important;
+    color: #C5A059 !important;
+}
+
+.inv-premium-page-gold div[class*="Select-option"][class*="selected"],
+.inv-premium-page-gold div[class*="Select__option"][class*="selected"] {
+    background-color: #FAF2DF !important;
+    color: #1C1B19 !important;
+    font-weight: 600 !important;
+}
+
+.inv-premium-page-gold div[class*="Select-value"],
+.inv-premium-page-gold div[class*="Select__multi-value"] {
+    background-color: #FAF9F6 !important;
+    border: 1px solid #C5A059 !important;
+    border-radius: 4px !important;
+}
+
+.inv-premium-page-gold .DateRangePickerInput,
+.inv-premium-page-gold .DateRangePickerInput_1 {
+    background-color: #FFFFFF !important;
+    border: 1px solid #C5A059 !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+    display: flex !important;
+    align-items: center;
+}
+
+.inv-premium-page-gold .DateInput,
+.inv-premium-page-gold .DateInput_1 {
+    background: #FFFFFF !important;
+}
+
+.inv-premium-page-gold .DateInput_input,
+.inv-premium-page-gold .DateInput_input_1 {
+    background: #FFFFFF !important;
+    color: #1C1B19 !important;
+    font-size: 13px !important;
+    padding: 8px 12px !important;
+    height: 36px !important;
+    border-bottom: none !important;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+}
+
+.inv-premium-page-gold .DateRangePickerInput_arrow,
+.inv-premium-page-gold .DateRangePickerInput_arrow_1 {
+    color: #C5A059 !important;
+}
+
+.inv-premium-page-gold ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.inv-premium-page-gold ::-webkit-scrollbar-track {
+    background: #FAF9F6;
+}
+.inv-premium-page-gold ::-webkit-scrollbar-thumb {
+    background: #C5A059;
+    border-radius: 3px;
+}
+.inv-premium-page-gold ::-webkit-scrollbar-thumb:hover {
+    background: #9E7D3B;
+}
+
+/* Premium cards for gold theme */
+.inv-gold-card {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E8DFCE !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 25px rgba(158, 125, 59, 0.08) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    margin-bottom: 24px !important;
+}
+
+.inv-gold-card:hover {
+    box-shadow: 0 8px 35px rgba(158, 125, 59, 0.15) !important;
+}
+
+.inv-gold-card .card-header {
+    background-color: #FAF9F6 !important;
+    border-bottom: 1px solid #E8DFCE !important;
+    padding: 16px 20px !important;
+}
+
+.inv-gold-card .card-body {
+    padding: 20px !important;
+}
+
+/* KPI Card for Gold Theme (Gold Gradient style) */
+.inv-kpi-card-gold {
+    background: linear-gradient(135deg, #D4B26F 0%, #B38F48 50%, #8E6D2F 100%) !important;
+    border: 1px solid #A68748 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 6px 18px rgba(166, 135, 72, 0.2) !important;
+    height: 75px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+
+.inv-kpi-card-gold:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 25px rgba(166, 135, 72, 0.35) !important;
+    border-color: #CDB37F !important;
+}
+
+/* Base wrapper styling to support smooth clip-path transitions */
+#home-layout-wrapper {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    min-height: 100vh;
+}
+
+#home-layout-wrapper.inv-premium-page-gold {
+    background: linear-gradient(135deg, #F9F7F1 0%, #E6D8BE 40%, #CDB37F 80%, #A68748 100%) !important;
+    color: #1C1B19 !important;
+}
+
+/* Circular Reveal Transition for Dark Mode from the Top-Right Toggle Button */
+#home-layout-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #1C1A17 0%, #2D271E 50%, #151311 100%) !important;
+    z-index: -1;
+    transition: clip-path 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    clip-path: circle(0% at calc(100% - 37.5px) 37.5px);
+    pointer-events: none;
+}
+
+#home-layout-wrapper.inv-premium-page-gold-dark::before {
+    clip-path: circle(150% at calc(100% - 37.5px) 37.5px);
+}
+
+/* Smooth transition for theme colors */
+#home-layout-wrapper, 
+#home-layout-wrapper * {
+    transition: color 0.4s ease, border-color 0.4s ease, background-color 0.4s ease;
+}
+
+/* Premium Dark Gold Gradient Theme (Base class keeps light background underneath so the circular transition draws on top) */
+.inv-premium-page-gold-dark {
+    font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    background: linear-gradient(135deg, #F9F7F1 0%, #E6D8BE 40%, #CDB37F 80%, #A68748 100%) !important;
+    min-height: 100vh;
+    padding: 24px 30px !important;
+    color: #FFFFFF !important;
+}
+
+.inv-premium-page-gold-dark h1, 
+.inv-premium-page-gold-dark h2, 
+.inv-premium-page-gold-dark h3, 
+.inv-premium-page-gold-dark h4, 
+.inv-premium-page-gold-dark h5, 
+.inv-premium-page-gold-dark h6 {
+    font-family: 'Outfit', sans-serif !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+}
+
+/* Custom hover styles for Branch Health Dashboard KPI Cards */
+.branch-kpi-card {
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), filter 0.2s ease !important;
+}
+.branch-kpi-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) !important;
+    filter: brightness(1.25);
+    cursor: pointer;
+}
+
+
+

@@ -1,0 +1,904 @@
+/* Sales Countdown Page Style */
+
+.countdown-page-container {
+    background: radial-gradient(circle at center, #3a0d0d 0%, #140202 100%) !important;
+    min-height: 100vh;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    color: #ffffff;
+    overflow-y: auto;
+}
+
+.countdown-hero-screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 20px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.countdown-charts-screen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+}
+
+/* Back Button */
+.countdown-back-btn {
+    align-self: flex-start;
+    z-index: 10;
+}
+
+/* Header Clock Section */
+.countdown-header-clock {
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-clock-label {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #c5a059;
+    margin-bottom: 5px;
+    opacity: 0.9;
+}
+
+.countdown-clock-time {
+    font-size: 3.5rem;
+    font-weight: 800;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Main Display Section */
+.countdown-main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.countdown-main-label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #e3d2b5;
+    margin-bottom: 30px;
+    text-align: center;
+    opacity: 0.85;
+}
+
+/* Flip Tile Layout */
+.flip-counter-wrapper {
+    display: flex;
+    flex-wrap: nowrap !important;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8vw;
+    max-width: 98%;
+    margin: 0 auto;
+}
+
+/* Flip Tile Box */
+.flip-tile {
+    position: relative;
+    width: 6.5vw;
+    height: 9.5vw;
+    background: linear-gradient(to bottom, #2e2a24 0%, #1c1a17 50%, #151311 50.1%, #0a0908 100%);
+    border: 0.15vw solid rgba(197, 160, 89, 0.45);
+    border-radius: 1vw;
+    box-shadow: 0 1vw 2.5vw rgba(0, 0, 0, 0.85), inset 0 0.15vw 0.4vw rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    perspective: 400px;
+    will-change: transform;
+}
+
+/* Rupee Tile and Comma Tile adjustment */
+.flip-tile.symbol-tile {
+    width: 5.2vw;
+    background: linear-gradient(to bottom, #3d3525 0%, #292318 50%, #201a11 50.1%, #120f0a 100%);
+    border-color: rgba(197, 160, 89, 0.6);
+}
+
+.flip-tile.comma-tile {
+    width: 2.2vw;
+    height: 9.5vw;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 1.5vw;
+}
+
+/* Tile character styles */
+.flip-char {
+    font-size: 7vw;
+    font-weight: 900;
+    font-family: 'Outfit', 'Trebuchet MS', sans-serif;
+    color: #c5a059;
+    text-shadow: 0 0.15vw 0.3vw rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: inline-block;
+}
+
+.flip-char.symbol-char {
+    color: #e3d2b5;
+    font-size: 5vw;
+}
+
+.flip-char.comma-char {
+    color: #c5a059;
+    font-size: 7.5vw;
+    line-height: 1;
+}
+
+/* Horizontal split line overlay */
+.flip-tile:not(.comma-tile)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(50% - 0.1vw);
+    height: 0.2vw;
+    background: #000000;
+    box-shadow: 0 0.05vw 0 rgba(255, 255, 255, 0.15);
+    z-index: 5;
+}
+
+/* Micro interaction bounce when numbers change */
+.flip-animate {
+    animation: tile-flip 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@keyframes tile-flip {
+    0% {
+        transform: scale(1) rotateX(0deg);
+        filter: brightness(1);
+    }
+    50% {
+        transform: scale(1.03) rotateX(20deg);
+        filter: brightness(1.15);
+    }
+    100% {
+        transform: scale(1) rotateX(0deg);
+        filter: brightness(1);
+    }
+}
+
+/* Info Section at the bottom */
+.countdown-info-footer {
+    text-align: center;
+    margin-top: 3vw;
+    width: 100%;
+    z-index: 5;
+}
+
+.countdown-footer-msg {
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: #e3d2b5;
+    background: rgba(197, 160, 89, 0.15);
+    border: 0.1vw solid rgba(197, 160, 89, 0.3);
+    padding: 0.8vw 2.2vw;
+    border-radius: 3vw;
+    display: inline-block;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0.5vw 1.5vw rgba(0, 0, 0, 0.3);
+}
+
+.countdown-latest-date {
+    font-size: 1.1vw;
+    color: #a89375;
+    margin-top: 0.8vw;
+    letter-spacing: 0.1vw;
+}
+
+/* Medium & Small screen overrides (Tablets / Laptops / Phones where viewport width is small) */
+@media (max-width: 1024px) {
+    .flip-tile {
+        width: 65px;
+        height: 100px;
+        border-radius: 10px;
+        border-width: 1.5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    }
+    .flip-tile.symbol-tile {
+        width: 50px;
+    }
+    .flip-tile.comma-tile {
+        width: 20px;
+        height: 100px;
+        padding-bottom: 15px;
+    }
+    .flip-char {
+        font-size: 4.5rem;
+    }
+    .flip-char.symbol-char {
+        font-size: 3.5rem;
+    }
+    .flip-char.comma-char {
+        font-size: 4.8rem;
+    }
+    .flip-tile:not(.comma-tile)::after {
+        top: calc(50% - 1px);
+        height: 2px;
+    }
+    .countdown-clock-time {
+        font-size: 2.2rem;
+        padding: 6px 15px;
+    }
+    .countdown-main-label {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+    .countdown-footer-msg {
+        font-size: 1rem;
+        padding: 8px 20px;
+        border-radius: 20px;
+        border-width: 1px;
+    }
+    .countdown-latest-date {
+        font-size: 0.8rem;
+        margin-top: 6px;
+    }
+}
+
+@media (max-width: 576px) {
+    .flip-tile {
+        width: 42px;
+        height: 65px;
+        border-radius: 6px;
+        border-width: 1px;
+    }
+    .flip-tile.symbol-tile {
+        width: 32px;
+    }
+    .flip-tile.comma-tile {
+        width: 12px;
+        height: 65px;
+        padding-bottom: 8px;
+    }
+    .flip-char {
+        font-size: 2.8rem;
+    }
+    .flip-char.symbol-char {
+        font-size: 2.2rem;
+    }
+    .flip-char.comma-char {
+        font-size: 3rem;
+    }
+    .countdown-clock-time {
+        font-size: 1.6rem;
+        padding: 4px 10px;
+    }
+}
+
+/* Dynamic Bar Charts for Sales Countdown Page */
+
+.live-bar-charts-section {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.live-chart-container {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0px 1px rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.live-chart-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #e3d2b5;
+    margin-bottom: 20px;
+    border-left: 4px solid #c5a059;
+    padding-left: 10px;
+}
+
+.live-bar-list-wrapper {
+    position: relative;
+    width: 100%;
+    transition: height 0.5s ease;
+}
+
+.live-bar-row {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    height: 3.2rem;
+    gap: 15px;
+    transition: top 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.live-bar-label {
+    width: 150px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.live-bar-track {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    height: 1.8rem;
+    border-radius: 9px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+}
+
+.live-bar-fill-sales {
+    height: 100%;
+    background: linear-gradient(90deg, #0284c7 0%, #38bdf8 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 12px;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.live-bar-fill-customers {
+    height: 100%;
+    background: linear-gradient(90deg, #7c3aed 0%, #c084fc 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 12px;
+    box-shadow: 0 0 15px rgba(192, 132, 252, 0.4);
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.live-bar-value {
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+.live-bar-value.outside-bar {
+    margin-left: 10px;
+    color: #e3d2b5;
+    text-shadow: none;
+    white-space: nowrap;
+}
+
+.countdown-scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+.countdown-scroll-text {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #a89375;
+    font-weight: 600;
+}
+
+.countdown-scroll-arrow {
+    font-size: 1.5rem;
+    color: #c5a059;
+    margin-top: 5px;
+    animation: bounce-arrow 2s infinite;
+}
+
+@keyframes bounce-arrow {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-8px);
+    }
+    60% {
+        transform: translateY(-4px);
+    }
+}
+
+/* ---------------------------------------------------
+   Premium Visual Enhancements additions
+   --------------------------------------------------- */
+
+.sales-card {
+    background: rgba(26, 5, 5, 0.95);
+    border: 1px solid rgba(197, 160, 89, 0.15);
+    border-radius: 24px;
+    padding: 40px 60px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+    position: relative;
+    z-index: 5;
+    will-change: transform;
+}
+
+@keyframes sales-card-pulse {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.015);
+        box-shadow: 0 25px 60px rgba(197, 160, 89, 0.25), 0 0 20px rgba(197, 160, 89, 0.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.sales-card.sales-card-pulse {
+    animation: sales-card-pulse 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.sales-card.sales-card-emphasis {
+    transform: scale(1.03);
+    box-shadow: 0 30px 70px rgba(255, 215, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.1) !important;
+}
+
+.sales-card.sales-card-gold-border {
+    border-color: rgba(255, 215, 0, 0.75) !important;
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.5), inset 0 0 15px rgba(255, 215, 0, 0.25) !important;
+    animation: border-sparkle 1.5s infinite alternate;
+}
+
+@keyframes border-sparkle {
+    0% {
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.3), inset 0 0 10px rgba(255, 215, 0, 0.15);
+    }
+    100% {
+        box-shadow: 0 0 50px rgba(255, 215, 0, 0.7), inset 0 0 25px rgba(255, 215, 0, 0.35);
+    }
+}
+
+.flip-tile.glow-gold {
+    box-shadow: 0 0 30px #c5a059, inset 0 0 12px #c5a059 !important;
+    border-color: #c5a059 !important;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.achievement-banner {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.85);
+    background: linear-gradient(135deg, rgba(20, 2, 2, 0.95) 0%, rgba(38, 12, 12, 0.95) 100%);
+    border: 2px solid #c5a059;
+    box-shadow: 0 15px 40px rgba(197, 160, 89, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    padding: 25px 50px;
+    border-radius: 16px;
+    z-index: 99;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
+}
+
+.achievement-banner.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.achievement-text {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+    letter-spacing: 3px;
+    white-space: nowrap;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+    .sales-card {
+        padding: 30px 45px;
+        border-radius: 20px;
+    }
+    .achievement-text {
+        font-size: 1.6rem;
+    }
+    .achievement-banner {
+        padding: 18px 36px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sales-card {
+        padding: 20px 25px;
+        border-radius: 14px;
+        width: 95%;
+    }
+    .achievement-text {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+    .achievement-banner {
+        padding: 12px 20px;
+        top: 20%;
+    }
+}
+
+/* ---------------------------------------------------
+   Yesterday Comparison Badge styles
+   --------------------------------------------------- */
+.yesterday-comparison-container {
+    margin-top: 2.5vh;
+    padding: 10px 25px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(197, 160, 89, 0.15);
+    border-radius: 12px;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    letter-spacing: 1.5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.yesterday-comparison-container .comparison-label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #a89375;
+    text-transform: uppercase;
+}
+
+.yesterday-comparison-container .comparison-value {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 1024px) {
+    .yesterday-comparison-container {
+        padding: 8px 18px;
+    }
+    .yesterday-comparison-container .comparison-label {
+        font-size: 0.8rem;
+    }
+    .yesterday-comparison-container .comparison-value {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .yesterday-comparison-container {
+        padding: 6px 12px;
+        gap: 5px;
+    }
+    .yesterday-comparison-container .comparison-label {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+    .yesterday-comparison-container .comparison-value {
+        font-size: 0.85rem;
+    }
+}
+
+/* ---------------------------------------------------
+   Top Header Row Styles (Back Navigation + RM/ZM Filters + Audio Toggle)
+   --------------------------------------------------- */
+.countdown-top-bar {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.countdown-top-left-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    pointer-events: auto;
+}
+
+.countdown-top-bar .audio-toggle-btn {
+    pointer-events: auto;
+    position: static !important; /* reset absolute */
+}
+
+.countdown-top-bar .countdown-back-btn {
+    position: static !important; /* reset absolute */
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.countdown-top-bar .countdown-back-btn:hover {
+    color: #c5a059 !important;
+}
+
+/* ---------------------------------------------------
+   Volume toggle button
+   --------------------------------------------------- */
+.audio-toggle-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    z-index: 100;
+}
+
+.audio-toggle-btn:hover {
+    background: rgba(197, 160, 89, 0.15);
+    border-color: rgba(197, 160, 89, 0.8);
+    transform: scale(1.05);
+}
+
+.audio-toggle-btn:active {
+    transform: scale(0.95);
+}
+
+.audio-toggle-btn.muted {
+    border-color: rgba(255, 255, 255, 0.2);
+    opacity: 0.7;
+}
+
+/* ---------------------------------------------------
+   RM ZM Dropdowns Filter Row styles
+   --------------------------------------------------- */
+.countdown-filter-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 10;
+}
+
+.countdown-dropdown {
+    width: 170px;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+/* Absolute Wildcard overrides to guarantee deep red background and white text */
+#countdown-rm-dropdown,
+#countdown-rm-dropdown *,
+#countdown-zm-dropdown,
+#countdown-zm-dropdown * {
+    background-color: #250505 !important;
+    background: #250505 !important;
+    color: #ffffff !important;
+}
+
+#countdown-rm-dropdown div[class*="-control"],
+#countdown-zm-dropdown div[class*="-control"],
+#countdown-rm-dropdown div[class*="Select-control"],
+#countdown-zm-dropdown div[class*="Select-control"],
+#countdown-rm-dropdown div[class*="Select__control"],
+#countdown-zm-dropdown div[class*="Select__control"] {
+    background-color: #250505 !important;
+    background: #250505 !important;
+    border: 1px solid rgba(197, 160, 89, 0.3) !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+
+/* Make sure container and divs hover states turn gold */
+#countdown-rm-dropdown:hover div,
+#countdown-zm-dropdown:hover div,
+#countdown-rm-dropdown div[class*="-control"]:hover,
+#countdown-zm-dropdown div[class*="-control"]:hover {
+    border-color: rgba(197, 160, 89, 0.8) !important;
+}
+
+/* Force placeholders to be visible off-white text and transparent background */
+#countdown-rm-dropdown div[class*="-placeholder"],
+#countdown-zm-dropdown div[class*="-placeholder"],
+#countdown-rm-dropdown div[class*="Select-placeholder"],
+#countdown-zm-dropdown div[class*="Select-placeholder"],
+#countdown-rm-dropdown .Select-placeholder,
+#countdown-zm-dropdown .Select-placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+    opacity: 0.95 !important;
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Force selection text to be white */
+#countdown-rm-dropdown div[class*="-singleValue"],
+#countdown-zm-dropdown div[class*="-singleValue"],
+#countdown-rm-dropdown div[class*="Select-value"],
+#countdown-zm-dropdown div[class*="Select-value"],
+#countdown-rm-dropdown .Select-value-label,
+#countdown-zm-dropdown .Select-value-label,
+#countdown-rm-dropdown span,
+#countdown-zm-dropdown span {
+    color: #ffffff !important;
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Force standard input text to be white */
+#countdown-rm-dropdown input,
+#countdown-zm-dropdown input {
+    color: #ffffff !important;
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Option menu list overrides (Solid dark burgundy background) */
+#countdown-rm-dropdown div[class*="-menu"],
+#countdown-zm-dropdown div[class*="-menu"],
+#countdown-rm-dropdown div[class*="Select-menu-outer"],
+#countdown-zm-dropdown div[class*="Select-menu-outer"],
+#countdown-rm-dropdown .Select-menu-outer,
+#countdown-zm-dropdown .Select-menu-outer {
+    background-color: #1a0505 !important;
+    background: #1a0505 !important;
+    border: 1px solid rgba(197, 160, 89, 0.4) !important;
+    border-radius: 8px !important;
+    z-index: 2000 !important;
+}
+
+#countdown-rm-dropdown div[class*="-menu"] *,
+#countdown-zm-dropdown div[class*="-menu"] * {
+    background-color: transparent !important; /* prevent default react-select option backgrounds */
+    background: transparent !important;
+}
+
+/* Dropdown list option styling */
+#countdown-rm-dropdown div[class*="-option"],
+#countdown-zm-dropdown div[class*="-option"],
+#countdown-rm-dropdown div[class*="Select-option"],
+#countdown-zm-dropdown div[class*="Select-option"],
+#countdown-rm-dropdown .VirtualizedSelectOption,
+#countdown-zm-dropdown .VirtualizedSelectOption {
+    color: #ffffff !important;
+    background-color: transparent !important;
+    background: transparent !important;
+    padding: 8px 12px !important;
+    cursor: pointer;
+}
+
+/* Hover/Focused option state overrides */
+#countdown-rm-dropdown div[class*="-option"][class*="-isFocused"],
+#countdown-zm-dropdown div[class*="-option"][class*="-isFocused"],
+#countdown-rm-dropdown div[class*="Select-option"][class*="-isFocused"],
+#countdown-zm-dropdown div[class*="Select-option"][class*="-isFocused"],
+#countdown-rm-dropdown div[class*="Select-option"]:hover,
+#countdown-zm-dropdown div[class*="Select-option"]:hover,
+#countdown-rm-dropdown .VirtualizedSelectFocusedOption,
+#countdown-zm-dropdown .VirtualizedSelectFocusedOption,
+#countdown-rm-dropdown div[class*="-option"]:hover,
+#countdown-zm-dropdown div[class*="-option"]:hover {
+    background-color: rgba(197, 160, 89, 0.25) !important;
+    background: rgba(197, 160, 89, 0.25) !important;
+    color: #ffffff !important;
+}
+
+/* Selected option state overrides */
+#countdown-rm-dropdown div[class*="-option"][class*="-isSelected"],
+#countdown-zm-dropdown div[class*="-option"][class*="-isSelected"],
+#countdown-rm-dropdown div[class*="Select-option"][class*="-isSelected"],
+#countdown-zm-dropdown div[class*="Select-option"][class*="-isSelected"] {
+    background-color: rgba(197, 160, 89, 0.45) !important;
+    background: rgba(197, 160, 89, 0.45) !important;
+    color: #ffffff !important;
+}
+
+/* Dropdown clear indicator and arrow indicator color */
+#countdown-rm-dropdown div[class*="-indicatorContainer"],
+#countdown-zm-dropdown div[class*="-indicatorContainer"],
+#countdown-rm-dropdown div[class*="-indicatorContainer"] *,
+#countdown-zm-dropdown div[class*="-indicatorContainer"] *,
+#countdown-rm-dropdown div[class*="Select-clear-zone"],
+#countdown-zm-dropdown div[class*="Select-clear-zone"],
+#countdown-rm-dropdown div[class*="Select-arrow-zone"],
+#countdown-zm-dropdown div[class*="Select-arrow-zone"] {
+    color: rgba(197, 160, 89, 0.8) !important;
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+#countdown-rm-dropdown .Select-arrow,
+#countdown-zm-dropdown .Select-arrow {
+    border-color: rgba(197, 160, 89, 0.8) transparent transparent !important;
+}
+
+@media (max-width: 1024px) {
+    .countdown-top-left-group {
+        gap: 12px;
+    }
+    .countdown-dropdown {
+        width: 140px;
+    }
+}
+
+@media (max-width: 576px) {
+    .countdown-top-bar {
+        top: 15px;
+        left: 15px;
+        right: 15px;
+    }
+    .countdown-top-left-group {
+        gap: 8px;
+    }
+    .countdown-dropdown {
+        width: 110px;
+        font-size: 0.75rem;
+    }
+    .countdown-dropdown div,
+    .countdown-dropdown div[class*="-control"] {
+        height: 32px !important;
+    }
+    .countdown-dropdown div[class*="-placeholder"] {
+        line-height: 30px !important;
+    }
+    .audio-toggle-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+}

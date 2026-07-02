@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Main Premium Scoped Container - Light Blue Theme */
+.inv-premium-page-blue {
+    font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    background: linear-gradient(135deg, #F0F4F8 0%, #E2E8F0 50%, #CBD5E1 100%) !important; /* Soft ice-blue gradient */
+    min-height: 100vh;
+    padding: 24px 30px !important;
+    color: #1E293B !important; /* Slate navy */
+}
+
+/* Page titles */
+.inv-premium-page-blue h1, 
+.inv-premium-page-blue h2, 
+.inv-premium-page-blue h3, 
+.inv-premium-page-blue h4, 
+.inv-premium-page-blue h5, 
+.inv-premium-page-blue h6 {
+    font-family: 'Outfit', sans-serif !important;
+    color: #0F172A !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+}
+
+/* Premium cards for light blue theme */
+.inv-blue-card {
+    background-color: #FFFFFF !important;
+    border: 1px solid #CBD5E1 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    margin-bottom: 24px !important;
+}
+
+.inv-blue-card:hover {
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08) !important;
+}
+
+.inv-blue-card .card-header {
+    background-color: #F8FAFC !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+    padding: 16px 20px !important;
+}
+
+.inv-blue-card .card-body {
+    padding: 20px !important;
+}
+
+/* Premium styled buttons */
+.inv-btn-blue {
+    background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%) !important;
+    border: none !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2) !important;
+    transition: all 0.2s ease !important;
+}
+
+.inv-btn-blue:hover {
+    background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%) !important;
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3) !important;
+    transform: translateY(-1px);
+    color: #FFFFFF !important;
+}
+
+.inv-btn-blue-dark {
+    background-color: #1E293B !important;
+    border: 1px solid #1E293B !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    transition: all 0.2s ease !important;
+}
+
+.inv-btn-blue-dark:hover {
+    background-color: #334155 !important;
+    border-color: #334155 !important;
+    color: #FFFFFF !important;
+}
+
+/* Dropdown styling wrapper overrides */
+.inv-premium-page-blue div[class*="Select-control"],
+.inv-premium-page-blue div[class*="Select__control"] {
+    background-color: #FFFFFF !important;
+    border: 1px solid #94A3B8 !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    color: #0F172A !important;
+}
+
+.inv-premium-page-blue div[class*="Select"],
+.inv-premium-page-blue div[class*="Select"] *,
+.inv-premium-page-blue span[class*="Select"],
+.inv-premium-page-blue span[class*="Select"] *,
+.inv-premium-page-blue input[class*="Select"],
+.inv-premium-page-blue .dash-dropdown,
+.inv-premium-page-blue .dash-dropdown * {
+    color: #0F172A !important;
+}
+
+.inv-premium-page-blue div[class*="placeholder"],
+.inv-premium-page-blue span[class*="placeholder"] {
+    color: #64748B !important;
+}
+
+.inv-premium-page-blue div[class*="Select-menu-outer"],
+.inv-premium-page-blue div[class*="Select__menu"] {
+    background-color: #FFFFFF !important;
+    border: 1px solid #CBD5E1 !important;
+    border-radius: 8px !important;
+    z-index: 1000 !important;
+}
+
+.inv-premium-page-blue div[class*="Select-option"],
+.inv-premium-page-blue div[class*="Select__option"] {
+    background-color: #FFFFFF !important;
+    color: #0F172A !important;
+    padding: 10px 14px !important;
+}
+
+.inv-premium-page-blue div[class*="Select-option"][class*="focused"],
+.inv-premium-page-blue div[class*="Select__option"][class*="focused"] {
+    background-color: #F1F5F9 !important;
+    color: #2563EB !important;
+}
+
+.inv-premium-page-blue div[class*="Select-option"][class*="selected"],
+.inv-premium-page-blue div[class*="Select__option"][class*="selected"] {
+    background-color: #DBEAFE !important;
+    color: #1E40AF !important;
+    font-weight: 600 !important;
+}
+
+/* Pills for multi-select */
+.inv-premium-page-blue div[class*="Select-value"],
+.inv-premium-page-blue div[class*="Select__multi-value"] {
+    background-color: #F1F5F9 !important;
+    border: 1px solid #CBD5E1 !important;
+    border-radius: 4px !important;
+}
+
+/* Date Picker Overrides for Blue Theme */
+.inv-premium-page-blue .DateRangePickerInput,
+.inv-premium-page-blue .DateRangePickerInput_1 {
+    background-color: #FFFFFF !important;
+    border: 1px solid #94A3B8 !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+    display: flex !important;
+    align-items: center;
+}
+
+.inv-premium-page-blue .DateInput,
+.inv-premium-page-blue .DateInput_1 {
+    background: #FFFFFF !important;
+}
+
+.inv-premium-page-blue .DateInput_input,
+.inv-premium-page-blue .DateInput_input_1 {
+    background: #FFFFFF !important;
+    color: #0F172A !important;
+    font-size: 13px !important;
+    padding: 8px 12px !important;
+    height: 36px !important;
+    border-bottom: none !important;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+}
+
+.inv-premium-page-blue .DateRangePickerInput_arrow,
+.inv-premium-page-blue .DateRangePickerInput_arrow_1 {
+    color: #3B82F6 !important;
+}
+
+/* Styled Scrollbars inside page */
+.inv-premium-page-blue ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.inv-premium-page-blue ::-webkit-scrollbar-track {
+    background: #F1F5F9;
+}
+.inv-premium-page-blue ::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 3px;
+}
+.inv-premium-page-blue ::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+}
+
+/* Radio Button Group (Toggle compare/consolidate) */
+.toggle-btn-group .btn-group {
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.toggle-btn-group .btn {
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 24px;
+}
+
+/* Custom styled Segmented Toggle Group for Light Blue Theme */
+.pa-toggle-group {
+    display: inline-flex;
+    background-color: #E2E8F0;
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid #CBD5E1;
+}
+
+.pa-toggle-group .btn {
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    padding: 8px 20px !important;
+    border: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.pa-toggle-group .btn-primary {
+    background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 2px 6px rgba(29, 78, 216, 0.2) !important;
+}
+
+.pa-toggle-group .btn-outline-primary {
+    background: transparent !important;
+    color: #475569 !important;
+}
+
+.pa-toggle-group .btn-outline-primary:hover {
+    color: #1E40AF !important;
+    background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Card hover transition effect to raise the card */
+.inv-hover-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out !important;
+}
+.inv-hover-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1) !important;
+}
+

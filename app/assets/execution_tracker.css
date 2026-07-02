@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Main Page Container styling */
+.et-container {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    background: linear-gradient(135deg, #0b0f19 0%, #111827 50%, #030712 100%) !important;
+    min-height: 100vh;
+    padding: 24px 30px !important;
+    color: #f8fafc !important;
+}
+
+
+/* KPI Cards styling with top highlights and micro-interactions */
+.et-kpi-card {
+    background: #1e293b !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
+    overflow: hidden;
+    position: relative;
+    height: 70px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.et-kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--accent-color, #64748b);
+}
+
+.et-kpi-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Specific KPI Accents */
+.et-kpi-open { --accent-color: #3b82f6; }       /* Blue */
+.et-kpi-completed { --accent-color: #10b981; }  /* Emerald */
+.et-kpi-overdue { --accent-color: #ef4444; }    /* Red */
+.et-kpi-blocked { --accent-color: #64748b; }    /* Slate */
+.et-kpi-week { --accent-color: #06b6d4; }       /* Cyan */
+.et-kpi-critical { --accent-color: #f59e0b; }   /* Amber */
+.et-kpi-rate { --accent-color: #8b5cf6; }       /* Violet */
+
+/* Filter Panel Styling */
+.et-filter-card {
+    background: #1e293b !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+    padding: 8px !important;
+}
+
+.et-filter-card label {
+    color: #94a3b8 !important;
+    text-transform: uppercase;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+/* Universal Dropdown Styling Overrides for High Contrast and Visibility */
+div[class*="Select-control"],
+div[class*="Select__control"] {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+}
+
+/* Force dark/black font color on all dropdown inner elements globally */
+div[class*="Select"],
+div[class*="Select"] *,
+span[class*="Select"],
+span[class*="Select"] *,
+input[class*="Select"],
+.dash-dropdown,
+.dash-dropdown * {
+    color: #000000 !important;
+}
+
+/* Ensure placeholder text is readable on white */
+div[class*="placeholder"],
+span[class*="placeholder"] {
+    color: #64748b !important;
+}
+
+/* Dropdown Option List Menu Container */
+div[class*="Select-menu-outer"],
+div[class*="Select__menu"] {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 8px !important;
+    z-index: 1000 !important;
+}
+
+/* Dropdown Option Item Text */
+div[class*="Select-option"],
+div[class*="Select__option"] {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 10px 14px !important;
+}
+
+/* Focus and select background highlight for options */
+div[class*="Select-option"][class*="focused"],
+div[class*="Select__option"][class*="focused"] {
+    background-color: #f1f5f9 !important;
+    color: #3b82f6 !important;
+}
+
+div[class*="Select-option"][class*="selected"],
+div[class*="Select__option"][class*="selected"] {
+    background-color: #e2e8f0 !important;
+    color: #000000 !important;
+    font-weight: 600 !important;
+}
+
+/* For multi-select dropdown selected items/pills */
+div[class*="Select-value"],
+div[class*="Select__multi-value"] {
+    background-color: #f1f5f9 !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 4px !important;
+    margin-top: 4px !important;
+}
+
+div[class*="Select-value-icon"],
+div[class*="Select__multi-value__remove"] {
+    border-right: 1px solid #cbd5e1 !important;
+    color: #64748b !important;
+    cursor: pointer !important;
+}
+
+div[class*="Select-value-icon"]:hover,
+div[class*="Select__multi-value__remove"]:hover {
+    background-color: #cbd5e1 !important;
+    color: #ef4444 !important;
+}
+
+.et-filter-card input[type="text"],
+.modal-body input[type="text"] {
+    background-color: #0f172a !important;
+    border: 1px solid #334155 !important;
+    color: #f8fafc !important;
+    border-radius: 8px !important;
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+    height: 38px !important;
+    width: 100%;
+}
+
+.et-filter-card input[type="text"]:focus,
+.modal-body input[type="text"]:focus {
+    border-color: #3b82f6 !important;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25) !important;
+}
+
+/* Premium Main Grid Container */
+.et-grid-card {
+    background: #1e293b !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+    overflow: hidden;
+    margin-bottom: 24px !important;
+}
+
+.et-grid-card .card-header {
+    background: rgba(15, 23, 42, 0.4) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 18px 24px !important;
+}
+
+/* Modal Custom styling over bootstrap standards */
+.modal-content {
+    background-color: #111827 !important; /* Deep Slate dark */
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4) !important;
+    color: #f8fafc !important;
+    overflow: hidden;
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+    padding: 20px 24px !important;
+    background-color: rgba(15, 23, 42, 0.3) !important;
+}
+
+.modal-title {
+    font-weight: 700 !important;
+    color: #f8fafc !important;
+    letter-spacing: -0.025em !important;
+    font-size: 18px !important;
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+    padding: 16px 24px !important;
+    background-color: rgba(15, 23, 42, 0.3) !important;
+}
+
+.modal-body {
+    padding: 24px 30px !important;
+}
+
+.modal-body label {
+    font-size: 11px !important;
+    color: #94a3b8 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 6px;
+    margin-top: 12px;
+}
+
+.modal-body textarea {
+    background-color: #0f172a !important;
+    border: 1px solid #334155 !important;
+    border-radius: 8px !important;
+    color: #f8fafc !important;
+    padding: 10px 14px !important;
+    font-size: 13px !important;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.modal-body textarea:focus {
+    border-color: #3b82f6 !important;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25) !important;
+}
+
+/* Custom Upload Zone Style */
+.et-upload-zone {
+    background-color: rgba(15, 23, 42, 0.5) !important;
+    border: 1px dashed #475569 !important;
+    border-radius: 8px !important;
+    padding: 18px !important;
+    text-align: center;
+    cursor: pointer;
+    color: #94a3b8 !important;
+    transition: all 0.2s ease !important;
+}
+
+.et-upload-zone:hover {
+    border-color: #3b82f6 !important;
+    background-color: rgba(59, 130, 246, 0.04) !important;
+    color: #f1f5f9 !important;
+}
+
+/* Hierarchy Chain layout tree elements */
+.et-chain-box {
+    background: rgba(30, 41, 59, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 12px !important;
+    padding: 16px 20px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.et-chain-box:hover {
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    transform: translateY(-2px);
+}
+
+.et-chain-box-root {
+    background: rgba(16, 185, 129, 0.04) !important;
+    border: 1px solid rgba(16, 185, 129, 0.25) !important;
+}
+
+.et-chain-box-root:hover {
+    border-color: rgba(16, 185, 129, 0.4) !important;
+}
+
+.et-chain-box-current {
+    background: rgba(59, 130, 246, 0.06) !important;
+    border: 1px solid rgba(59, 130, 246, 0.35) !important;
+    box-shadow: 0 4px 18px rgba(59, 130, 246, 0.12) !important;
+}
+
+.et-chain-box-current:hover {
+    border-color: rgba(59, 130, 246, 0.5) !important;
+}
+
+.et-chain-connector {
+    color: #475569 !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+    margin: 8px 0 !important;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* DatePicker custom overrides for Dark Mode */
+.SingleDatePickerInput,
+.SingleDatePickerInput__withBorder {
+    background-color: #0f172a !important;
+    border: 1px solid #334155 !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+    display: flex !important;
+    align-items: center;
+    width: 100% !important;
+}
+
+.DateInput,
+.DateInput_1 {
+    background: #0f172a !important;
+    width: 100% !important;
+}
+
+.DateInput_input,
+.DateInput_input_1 {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    font-size: 13px !important;
+    padding: 8px 12px !important;
+    height: 38px !important;
+    border-bottom: none !important;
+}
+
+.SingleDatePickerInput_calendarIcon {
+    background: #0f172a !important;
+    padding: 8px !important;
+    margin: 0 !important;
+    border-left: none !important;
+    color: #94a3b8 !important;
+}
+
+/* Button UI presets */
+.et-btn-glow-blue {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+    border: none !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3) !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    padding: 8px 18px !important;
+    transition: all 0.2s ease !important;
+}
+
+.et-btn-glow-blue:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4) !important;
+    transform: translateY(-1px);
+    color: #ffffff !important;
+}
+
+.et-btn-glow-warning {
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
+    border: none !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px rgba(217, 119, 6 0.3) !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    padding: 8px 18px !important;
+    transition: all 0.2s ease !important;
+}
+
+.et-btn-glow-warning:hover {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+    box-shadow: 0 6px 20px rgba(217, 119, 6, 0.4) !important;
+    transform: translateY(-1px);
+    color: #ffffff !important;
+}
+
+.et-btn-glow-secondary {
+    background: #334155 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #cbd5e1 !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    padding: 8px 18px !important;
+    transition: all 0.2s ease !important;
+}
+
+.et-btn-glow-secondary:hover {
+    background: #475569 !important;
+    color: #f8fafc !important;
+}
+
+.et-btn-glow-danger {
+    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%) !important;
+    border: none !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px rgba(239, 68, 68, 0.3) !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    padding: 8px 18px !important;
+    transition: all 0.2s ease !important;
+}
+
+.et-btn-glow-danger:hover {
+    background: linear-gradient(135deg, #f87171 0%, #ef4444 100%) !important;
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4) !important;
+    transform: translateY(-1px);
+    color: #ffffff !important;
+}
+
+/* Custom Scrollbars (scoped to Execution Tracker container only) */
+.et-container ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.et-container ::-webkit-scrollbar-track {
+    background: #0b0f19;
+}
+.et-container ::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+.et-container ::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}

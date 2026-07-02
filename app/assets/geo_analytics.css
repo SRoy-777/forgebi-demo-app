@@ -1,0 +1,212 @@
+/* app/assets/geo_analytics.css */
+
+/* Premium Dark GIS Dashboard Styles */
+
+.glass-card {
+    background: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.glass-card:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.kpi-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #a0a0a0;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.kpi-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.kpi-value-gold {
+    color: #e5c158;
+}
+
+.kpi-value-diamond {
+    color: #64b5f6;
+}
+
+/* Dark Theme Dropdown Overrides */
+.Select-control {
+    background-color: #121212 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+}
+
+.Select-menu-outer {
+    background-color: #121212 !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    z-index: 1001 !important;
+}
+
+.Select-value-label, .VirtualizedSelectOption {
+    color: #ffffff !important;
+}
+
+.VirtualizedSelectFocusedOption {
+    background-color: rgba(229, 193, 88, 0.15) !important;
+}
+
+.is-focused:not(.is-open) > .Select-control {
+    border-color: #e5c158 !important;
+}
+
+/* Dark Theme Date Picker Overrides */
+.DateInput, .DateInput_input {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+    font-size: 13px !important;
+}
+
+.DateRangePickerInput__withBorder {
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 4px;
+    background-color: #121212 !important;
+}
+
+.CalendarMonth, .CalendarMonthGrid, .CalendarMonth_caption, .DayPicker {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+.CalendarDay__default {
+    background-color: #1a1a1a !important;
+    border: 1px solid #222 !important;
+    color: #ccc !important;
+}
+
+.CalendarDay__selected, .CalendarDay__selected:hover {
+    background: #e5c158 !important;
+    color: #0b0b0b !important;
+}
+
+/* Segmented Category Radio Buttons */
+.segmented-btn-group .btn-outline-primary {
+    color: #a0a0a0;
+    border-color: rgba(255, 255, 255, 0.1);
+    background-color: transparent;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.segmented-btn-group .btn-outline-primary:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+.segmented-btn-group .btn-check:checked + .btn-outline-primary {
+    background-color: rgba(229, 193, 88, 0.2) !important;
+    border-color: #e5c158 !important;
+    color: #e5c158 !important;
+}
+
+/* Apply Filters Button Premium Style */
+.gis-btn-gold {
+    background-color: #e5c158;
+    color: #0b0b0b;
+    border: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.gis-btn-gold:hover {
+    background-color: #f7d672;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(229, 193, 88, 0.3);
+}
+
+/* Glassmorphism styling for Leaflet Tooltips */
+.leaflet-tooltip.hud-tooltip-card {
+    background: rgba(11, 11, 11, 0.92) !important;
+    backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(229, 193, 88, 0.35) !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+    padding: 12px 16px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7) !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 12px !important;
+    min-width: 250px !important;
+    white-space: normal !important;
+    pointer-events: none !important;
+}
+
+/* Hide standard Leaflet tooltip arrow */
+.leaflet-tooltip-top.hud-tooltip-card:before,
+.leaflet-tooltip-bottom.hud-tooltip-card:before,
+.leaflet-tooltip-left.hud-tooltip-card:before,
+.leaflet-tooltip-right.hud-tooltip-card:before {
+    display: none !important;
+    border: none !important;
+}
+
+/* Branch specific tooltips styling (clean small popups) */
+.leaflet-tooltip.branch-tooltip-card {
+    background: rgba(20, 20, 20, 0.95) !important;
+    backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 4px !important;
+    color: #ffffff !important;
+    padding: 4px 8px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 11px !important;
+}
+
+.leaflet-tooltip-top.branch-tooltip-card:before,
+.leaflet-tooltip-bottom.branch-tooltip-card:before,
+.leaflet-tooltip-left.branch-tooltip-card:before,
+.leaflet-tooltip-right.branch-tooltip-card:before {
+    display: none !important;
+}
+
+/* Custom glow animation for branch beacons class names if needed */
+.custom-div-icon {
+    background: transparent !important;
+    border: none !important;
+}
+
+/* Layering fix: ensure Leaflet container lies behind popups and dropdown panels */
+.leaflet-container {
+    z-index: 1 !important;
+}
+
+.leaflet-pane {
+    z-index: 2 !important;
+}
+
+.leaflet-top, .leaflet-bottom {
+    z-index: 1000 !important;
+}
+
+/* Push Dash calendars, dropdowns, and date pickers above all maps */
+.DateRangePicker_picker, 
+.DateRangePicker_picker_1,
+.SingleDatePicker_picker,
+.DayPicker {
+    position: absolute !important;
+    z-index: 9999 !important;
+}
+
+.DateRangePicker,
+.Select-menu-outer,
+.Select,
+.Select-menu,
+.DateRangePickerInput,
+.DateInput {
+    position: relative !important;
+    z-index: 9999 !important;
+}
