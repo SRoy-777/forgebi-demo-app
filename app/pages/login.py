@@ -21,7 +21,7 @@ layout = dbc.Container(
 
                                 html.H2(
 
-                                    "Orient BI Login",
+                                    "ForgeBI Login",
 
                                     style={
 
@@ -33,6 +33,22 @@ layout = dbc.Container(
 
                                     }
 
+                                ),
+
+                                html.Div(
+                                    [
+                                        html.P("🔑 Demo Account Details:", style={'fontWeight': 'bold', 'marginBottom': '5px', 'fontSize': '13px', 'color': '#C8A04D'}),
+                                        html.P("Email: demo@forgebi.com", style={'margin': '0', 'fontSize': '12px', 'fontFamily': 'monospace', 'color': '#4a4a4a'}),
+                                        html.P("Password: demo123", style={'margin': '0', 'fontSize': '12px', 'fontFamily': 'monospace', 'color': '#4a4a4a'})
+                                    ],
+                                    style={
+                                        'backgroundColor': '#FAF8F5',
+                                        'border': '1px solid #E8E5DF',
+                                        'borderRadius': '6px',
+                                        'padding': '10px 15px',
+                                        'marginBottom': '20px',
+                                        'textAlign': 'left'
+                                    }
                                 ),
 
                                 dbc.Input(

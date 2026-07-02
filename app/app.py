@@ -157,8 +157,6 @@ WEBSITE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "web
 
 @server.route('/')
 def serve_website():
-    if session.get('logged_in'):
-        return redirect('/home')
     return send_from_directory(WEBSITE_DIR, 'index.html')
 
 @server.route('/website-assets/<path:filename>')
