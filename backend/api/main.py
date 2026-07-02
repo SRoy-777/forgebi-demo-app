@@ -5,7 +5,7 @@ from backend.api.routers import sync, tags
 
 app = FastAPI(
     title="Business Central 365 Integration Gateway",
-    description="Strictly READ-ONLY API gateway to pull data from BC 365 to Orient Analytics",
+    description="Strictly READ-ONLY API gateway to pull data from BC 365 to ForgeBI Analytics",
     version="1.0.0"
 )
 

@@ -77,28 +77,30 @@ def get_layout():
             # ---------------------------------------------------
 
             html.Div(
-
-                html.Img(
-                    id='home-logo',
-
-                    src="/assets/orient_logo.png",
-
-                    style={
-
-                        'height': '110px',
-
-                        'marginBottom': '20px'
-
-                    }
-
-                ),
-
+                [
+                    # Hidden logo image to satisfy theme callback output without errors
+                    html.Img(
+                        id='home-logo',
+                        src="/assets/orient_logo.png",
+                        style={'display': 'none'}
+                    ),
+                    # Visible typography logo
+                    html.Span(
+                        "ForgeBI",
+                        style={
+                            'fontFamily': '"Outfit", sans-serif',
+                            'fontSize': '42px',
+                            'fontWeight': '800',
+                            'color': '#C8A04D',
+                            'letterSpacing': '2px',
+                            'display': 'inline-block',
+                            'marginBottom': '20px'
+                        }
+                    )
+                ],
                 style={
-
                     'textAlign': 'center'
-
                 }
-
             ),
 
             # ---------------------------------------------------
@@ -139,7 +141,7 @@ def get_layout():
 
             html.H1(
 
-                "Orient Business Intelligence",
+                "ForgeBI Business Intelligence Demo",
 
                 style={
 
@@ -153,22 +155,28 @@ def get_layout():
 
             ),
 
+            # Tagline / Disclaimer
             html.Div(
-
-                "Centralized Enterprise Analytics Application",
-
-                className='home-subheader',
-
+                "(Since this is a demo, the dashboards might not show figures as expected)",
                 style={
-
                     'textAlign': 'center',
-
-                    'fontSize': '18px',
-
-                    'marginBottom': '50px'
-
+                    'fontSize': '14px',
+                    'fontStyle': 'italic',
+                    'color': '#E26D5C',
+                    'marginBottom': '10px'
                 }
+            ),
 
+            # Mouldable Layout Note
+            html.Div(
+                "Completely mouldable. Don't want this layout? We can change it to however you like.",
+                style={
+                    'textAlign': 'center',
+                    'fontSize': '14px',
+                    'fontWeight': '500',
+                    'color': '#C8A04D',
+                    'marginBottom': '45px'
+                }
             ),
 
             # ---------------------------------------------------
@@ -515,7 +523,7 @@ def get_layout():
                             }
                         ),
                         html.H5(session.get('email', 'Guest User'), className='fw-bold mb-0 text-center'),
-                        html.Small("Orient BI Authorized Session", className='text-muted d-block text-center mt-1'),
+                        html.Small("ForgeBI Authorized Session", className='text-muted d-block text-center mt-1'),
                     ], className='p-3 mb-4 rounded', style={'backgroundColor': 'rgba(255, 255, 255, 0.05)', 'border': '1px solid rgba(255,255,255,0.1)'}),
 
                     # Navigation links
@@ -845,7 +853,7 @@ def handle_password_change(n_clicks, current_pw, new_pw, confirm_pw):
         </table>
         <p style="color: #777; font-size: 13px;">If this change was not authorized by the user, please take immediate administrative action to lock or reset the account.</p>
         <hr style="border: 0; border-top: 1px solid #eee; margin-top: 25px;">
-        <p style="font-size: 11px; color: #777; margin-bottom: 0;">Sent automatically via Orient BI Security System.</p>
+        <p style="font-size: 11px; color: #777; margin-bottom: 0;">Sent automatically via ForgeBI Security System.</p>
     </div>
     """
     
@@ -1062,7 +1070,7 @@ DASHBOARD_CATALOG = [
     {
         'key': 'dashboard-catalog',
         'title': 'Dashboard Catalog',
-        'desc': 'Centralized master registry showing all dynamically discovered dashboards across Orient BI.',
+        'desc': 'Centralized master registry showing all dynamically discovered dashboards across ForgeBI.',
         'module': 'Admin Hub',
         'href': '/dashboard-catalog'
     },

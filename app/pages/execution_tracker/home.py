@@ -49,7 +49,7 @@ STATUS_OPTIONS = [
 PROGRESS_OPTIONS = [0, 25, 50, 75, 100]
 
 # ---------------------------------------------------
-# DataTable Styling (Consistent with Orient BI Theme)
+# DataTable Styling (Consistent with ForgeBI Theme)
 # ---------------------------------------------------
 TABLE_STYLE = {
     'page_action': 'none',

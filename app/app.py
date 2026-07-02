@@ -115,7 +115,7 @@ app = Dash(
 
     __name__,
 
-    title="Orient BI",
+    title="ForgeBI",
 
     external_stylesheets=[
         dbc.themes.BOOTSTRAP
@@ -131,7 +131,7 @@ app.index_string = '''
     <head>
         {%metas%}
         <title>{%title%}</title>
-        <link rel="icon" type="image/png" href="/assets/orient_logo_for_dark_theme.png">
+        <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
         {%css%}
     </head>
     <body>
@@ -216,7 +216,7 @@ app.clientside_callback(
     """
     function(pathname) {
         if (!pathname || pathname === '/' || pathname === '/home') {
-            document.title = 'Orient BI';
+            document.title = 'ForgeBI';
             return '';
         }
         

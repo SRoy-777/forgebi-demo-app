@@ -26,7 +26,7 @@ layout = dbc.Container(
                 ),
                 dbc.Col(
                     html.Div(
-                        "Orient BI Accounts Department",
+                        "ForgeBI Accounts Department",
                         className='text-end fw-bold text-muted small',
                         style={'letterSpacing': '1px', 'color': "#f7f7f8"}
                     ),

@@ -49,7 +49,7 @@ layout = html.Div(
                         ),
                         dbc.Col(
                             html.Div(
-                                "Orient BI Inventory Department",
+                                "ForgeBI Inventory Department",
                                 className='text-end fw-bold text-muted small',
                                 style={'letterSpacing': '1px'}
                             ),

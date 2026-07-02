@@ -272,7 +272,7 @@ layout = dbc.Container([
 
     html.H3(
 
-        "Orient Daily Revenue",
+        "ForgeBI Daily Revenue",
 
         style={
             "textAlign": "center",

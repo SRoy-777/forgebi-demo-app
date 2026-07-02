@@ -20,15 +20,15 @@ def get_role_from_email(email):
     if not email:
         return 'Store Manager'
     email = email.lower().strip()
-    if email in ['md.desk@orientgroup.org.in', 'business.sroy@gmail.com', 'demo@admin.com']:
+    if email in ['md.desk@forgebi.in', 'business.sroy@gmail.com', 'demo@admin.com']:
         return 'MD'
-    elif email == 'ed.desk@orientgroup.org.in':
+    elif email == 'ed.desk@forgebi.in':
         return 'ED'
     elif 'rm' in email:
         return 'RM'
     elif 'zm' in email:
         return 'ZM'
-    elif email in ['sr.sm1@orientgroup.org.in', 'sr.sm2@orientgroup.org.in']:
+    elif email in ['sr.sm1@forgebi.in', 'sr.sm2@forgebi.in']:
         return 'Senior Store Manager'
     else:
         return 'Store Manager'

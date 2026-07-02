@@ -244,7 +244,7 @@ def handle_reset_request(n_clicks, email_value):
             <li>Send the temporary password to the user.</li>
         </ol>
         <hr style="border: 0; border-top: 1px solid #eee; margin-top: 25px;">
-        <p style="font-size: 11px; color: #777; margin-bottom: 0;">Sent automatically via Orient BI Reset Assistant.</p>
+        <p style="font-size: 11px; color: #777; margin-bottom: 0;">Sent automatically via ForgeBI Reset Assistant.</p>
     </div>
     """
 
@@ -252,4 +252,4 @@ def handle_reset_request(n_clicks, email_value):
     if success:
         return "Reset request sent to Administrator.", {"color": "green"}
     else:
-        return "Failed to send request. Contact admin at mis@orientgroup.org.in directly.", {"color": "red"}
+        return "Failed to send request. Contact admin at mis@forgebi.in directly.", {"color": "red"}

@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mapping of department templates
     const templates = {
         sales: {
-            url: 'forgebi.com/sales-dashboard',
+            url: 'forgebi.in/sales-dashboard',
             html: `
                 <div class="dept-preview sales-preview active">
                     <div class="dept-preview-header">
@@ -110,12 +110,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="preview-metrics">
                         <div class="preview-metric-box">
                             <span>Total Net Sales Value</span>
-                            <h4>$1,489,200</h4>
+                            <h4>₹14,89,200</h4>
                             <small class="positive">↑ 8.4% MoM</small>
                         </div>
                         <div class="preview-metric-box">
                             <span>Average Basket Value</span>
-                            <h4>$456.20</h4>
+                            <h4>₹456.20</h4>
                             <small class="positive">↑ 2.1% MoM</small>
                         </div>
                     </div>
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `
         },
         inventory: {
-            url: 'forgebi.com/inventory/aging-stock',
+            url: 'forgebi.in/inventory/aging-stock',
             html: `
                 <div class="dept-preview inventory-preview active">
                     <div class="dept-preview-header">
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="preview-metrics">
                         <div class="preview-metric-box">
                             <span>Total Stock Valuation</span>
-                            <h4>$3,120,400</h4>
+                            <h4>₹31,20,400</h4>
                             <small class="negative">↓ 1.4% Stock Cost</small>
                         </div>
                         <div class="preview-metric-box">
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `
         },
         accounts: {
-            url: 'forgebi.com/accounts/profitability',
+            url: 'forgebi.in/accounts/profitability',
             html: `
                 <div class="dept-preview accounts-preview active">
                     <div class="dept-preview-header">
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="preview-metric-box">
                             <span>EBITDA Metric</span>
-                            <h4>$342,800</h4>
+                            <h4>₹3,42,800</h4>
                             <small class="positive">↑ 11.2% YTD</small>
                         </div>
                     </div>
@@ -216,17 +216,17 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span>Expense Head</span><span>Budget</span><span>Actual</span>
                         </div>
                         <div class="table-row-mock">
-                            <span>Marketing Ads</span><span>$45,000</span><span>$42,100</span>
+                            <span>Marketing Ads</span><span>₹45,000</span><span>₹42,100</span>
                         </div>
                         <div class="table-row-mock">
-                            <span>SaaS Licenses</span><span>$12,000</span><span>$11,850</span>
+                            <span>SaaS Licenses</span><span>₹12,000</span><span>₹11,850</span>
                         </div>
                     </div>
                 </div>
             `
         },
         procurement: {
-            url: 'forgebi.com/procurement/vendors',
+            url: 'forgebi.in/procurement/vendors',
             html: `
                 <div class="dept-preview procurement-preview active">
                     <div class="dept-preview-header">
@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="preview-metric-box">
                             <span>Procurement Spend</span>
-                            <h4>$894,300</h4>
+                            <h4>₹8,94,300</h4>
                             <small class="negative">↑ 4.2% MoM</small>
                         </div>
                     </div>
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `
         },
         marketing: {
-            url: 'forgebi.com/marketing/campaigns',
+            url: 'forgebi.in/marketing/campaigns',
             html: `
                 <div class="dept-preview marketing-preview active">
                     <div class="dept-preview-header">
@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="preview-metrics">
                         <div class="preview-metric-box">
                             <span>Customer Acquisition Cost</span>
-                            <h4>$14.20</h4>
+                            <h4>₹14.20</h4>
                             <small class="positive">↓ 12% Cost Reduction</small>
                         </div>
                         <div class="preview-metric-box">
@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `
         },
         customercare: {
-            url: 'forgebi.com/customer-care/dormant',
+            url: 'forgebi.in/customer-care/dormant',
             html: `
                 <div class="dept-preview customer-preview active">
                     <div class="dept-preview-header">
@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `
         },
         hr: {
-            url: 'forgebi.com/hr/headcounts',
+            url: 'forgebi.in/hr/headcounts',
             html: `
                 <div class="dept-preview hr-preview active">
                     <div class="dept-preview-header">
@@ -379,18 +379,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `
         },
-        directors: {
-            url: 'forgebi.com/directors-hub/cockpit',
+        directorshub: {
+            url: 'forgebi.in/directors-hub/cockpit',
             html: `
                 <div class="dept-preview directors-preview active">
                     <div class="dept-preview-header">
-                        <h3>Directors Executive Cockpit</h3>
+                        <h3>Executive Cockpit & Live Operations</h3>
                         <div class="badge-gold-outline">Directors Hub</div>
                     </div>
                     <div class="preview-metrics">
                         <div class="preview-metric-box">
-                            <span>Group Total NSV</span>
-                            <h4>$24.8M</h4>
+                            <span>Consolidated Group Turnover</span>
+                            <h4>₹24.8 Cr</h4>
                             <small class="positive">↑ 14.8% YoY</small>
                         </div>
                         <div class="preview-metric-box">
@@ -404,17 +404,17 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span>Regional Hub</span><span>Sales YTD</span><span>KPI Status</span>
                         </div>
                         <div class="table-row-mock">
-                            <span>India East</span><span>$12.4M</span><span style="color:#72B095">Optimal</span>
+                            <span>India East</span><span>₹12.4 Cr</span><span style="color:#72B095">Optimal</span>
                         </div>
                         <div class="table-row-mock">
-                            <span>India South</span><span>$8.2M</span><span style="color:#72B095">Optimal</span>
+                            <span>India South</span><span>₹8.2 Cr</span><span style="color:#72B095">Optimal</span>
                         </div>
                     </div>
                 </div>
             `
         },
-        execution: {
-            url: 'forgebi.com/execution-tracker/tasks',
+        executiontracker: {
+            url: 'forgebi.in/execution-tracker/tasks',
             html: `
                 <div class="dept-preview execution-preview active">
                     <div class="dept-preview-header">
@@ -448,10 +448,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
     
+    let previewTimeout = null;
+    
     // Switch preview on hover
     if (deptCards.length > 0 && previewContainer && browserAddress) {
         deptCards.forEach(card => {
             card.addEventListener('mouseenter', () => {
+                // Clear any active transitions to prevent overlap
+                if (previewTimeout) {
+                    clearTimeout(previewTimeout);
+                }
+
                 // Remove active class from all cards
                 deptCards.forEach(c => c.classList.remove('active'));
                 
@@ -464,12 +471,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Update preview content and URL
                     browserAddress.textContent = templates[dept].url;
                     
-                    // Simple fade animation
-                    previewContainer.style.opacity = 0;
-                    setTimeout(() => {
+                    // Simple fade animation (fade to 0.2 slightly to avoid harsh flashing)
+                    previewContainer.style.opacity = 0.2;
+                    
+                    previewTimeout = setTimeout(() => {
                         previewContainer.innerHTML = templates[dept].html;
                         previewContainer.style.opacity = 1;
-                    }, 150);
+                    }, 80); // Snappier 80ms delay
                 }
             });
         });

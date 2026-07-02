@@ -3,7 +3,7 @@ import requests
 
 def send_admin_email_alert(subject, html_content):
     """
-    Sends an email notification to the administrator (mis@orientgroup.org.in) via Resend.
+    Sends an email notification to the administrator (mis@forgebi.in) via Resend.
     """
     api_key = os.getenv("RESEND_API_KEY")
     if not api_key:
@@ -16,8 +16,8 @@ def send_admin_email_alert(subject, html_content):
     }
 
     payload = {
-        "from": "Orient BI Security <alerts@orientgemsandornaments.com>",
-        "to": "mis@orientgroup.org.in",
+        "from": "ForgeBI Security <alerts@forgebi.in>",
+        "to": "mis@forgebi.in",
         "subject": subject,
         "html": html_content
     }

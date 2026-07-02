@@ -51,6 +51,7 @@
     border-radius: 50%;
     opacity: 0.15;
     animation: floatParticle 8s infinite linear;
+    will-change: transform, opacity;
 }
 
 @keyframes floatParticle {
@@ -171,13 +172,11 @@
 
 .dashboard-preview-window {
     width: 100%;
-    background: rgba(250, 248, 245, 0.6);
+    background: rgba(250, 248, 245, 0.92);
     border: 1px solid rgba(200, 160, 77, 0.15);
     border-radius: 12px;
     box-shadow: 0 30px 60px -15px rgba(26, 22, 18, 0.12),
                 0 0 100px -30px rgba(200, 160, 77, 0.15);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
     overflow: hidden;
     z-index: 2;
 }

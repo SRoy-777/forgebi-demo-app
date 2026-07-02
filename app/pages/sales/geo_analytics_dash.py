@@ -88,7 +88,7 @@ def make_branch_markers(branches):
         
         # Leaflet custom tooltip html content
         tooltip_content = html.Div([
-            html.Div("Orient Branch Beacon", style={'color': '#a0a0a0', 'fontSize': '9px', 'textTransform': 'uppercase', 'letterSpacing': '0.5px'}),
+            html.Div("ForgeBI Branch Beacon", style={'color': '#a0a0a0', 'fontSize': '9px', 'textTransform': 'uppercase', 'letterSpacing': '0.5px'}),
             html.Div(name, className="fw-bold", style={'color': '#e5c158', 'fontSize': '13px'}),
             html.Div(f"Location Code: {code}", style={'color': '#ffffff', 'fontSize': '11px'}),
             html.Div(f"Store Pincode: {pincode}", style={'color': '#a0a0a0', 'fontSize': '10px'})

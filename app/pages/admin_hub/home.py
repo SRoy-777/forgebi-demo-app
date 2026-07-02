@@ -26,7 +26,7 @@ layout = dbc.Container(
                 ),
                 dbc.Col(
                     html.Div(
-                        "Orient BI Admin Hub",
+                        "ForgeBI Admin Hub",
                         className='text-end fw-bold text-muted small',
                         style={'letterSpacing': '1px', 'color': "#C5A059"}
                     ),
@@ -141,7 +141,7 @@ def render_admin_home(grid_id):
         cards.append(
             build_admin_card(
                 "Dashboard Catalog",
-                "Centralized master registry showing all dynamically discovered dashboards across Orient BI.",
+                "Centralized master registry showing all dynamically discovered dashboards across ForgeBI.",
                 "/dashboard-catalog"
             )
         )

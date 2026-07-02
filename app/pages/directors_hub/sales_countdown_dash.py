@@ -238,7 +238,7 @@ layout = html.Div(
                 html.Div(
                     className='countdown-header-clock',
                     children=[
-                        html.Div("Orient Organization Time", className='countdown-clock-label'),
+                        html.Div("ForgeBI Organization Time", className='countdown-clock-label'),
                         html.Div(id='countdown-clock', className='countdown-clock-time', children="00:00:00")
                     ]
                 ),

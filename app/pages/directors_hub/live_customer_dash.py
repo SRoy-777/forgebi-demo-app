@@ -61,7 +61,7 @@ layout = html.Div(
         html.Div(
             className='odometer-header-clock',
             children=[
-                html.Div("Orient Organization Time", className='odometer-clock-label'),
+                html.Div("ForgeBI Organization Time", className='odometer-clock-label'),
                 html.Div(id='live-customer-clock', className='odometer-clock-time', children="00:00:00")
             ]
         ),
