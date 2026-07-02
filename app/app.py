@@ -155,9 +155,10 @@ from flask import send_from_directory, redirect
 
 WEBSITE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "website"))
 
-@server.route('/')
-def serve_website():
-    return send_from_directory(WEBSITE_DIR, 'index.html')
+@server.before_request
+def serve_website_before_request():
+    if request.path == '/':
+        return send_from_directory(WEBSITE_DIR, 'index.html')
 
 @server.route('/website-assets/<path:filename>')
 def serve_website_assets(filename):
