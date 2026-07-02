@@ -11,6 +11,10 @@ def validate_user(email, password):
                 "stock-movement", "dormant-customer", "daily-customer", "geo-analytics"
             ],
             "locations": ["Branch A", "Branch B", "Branch C"],
-            "modules": ["execution-tracker"]
+            "modules": [
+                "execution-tracker", "sales", "inventory", "procurement", 
+                "accounts", "customer-care", "directors-hub", "hr", 
+                "it", "marketing", "admin-hub"
+            ]
         }
     return None
