@@ -177,34 +177,8 @@ SESSION_VERSION = "v26"
 
 
 # ---------------------------------------------------
-# Block Direct HF Access
+# Block Direct HF Access (Bypassed in Demo Mode)
 # ---------------------------------------------------
-
-@server.before_request
-def block_hf_space_access():
-
-    current_host = request.host
-
-
-    # Allow HF internal signed traffic
-    if "__sign" in request.url:
-
-        return None
-
-
-    if "hf.space" in current_host:
-
-        return """
-
-        <h1 style='text-align:center;
-                   margin-top:100px;
-                   font-family:Arial;'>
-
-            Direct access is blocked.
-
-        </h1>
-
-        """, 403
 
 
 # ---------------------------------------------------
