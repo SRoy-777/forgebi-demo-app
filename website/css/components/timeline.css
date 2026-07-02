@@ -1,0 +1,123 @@
+/* ==========================================================================
+   Process Timeline (Roadmap Section) Stylesheet
+   ========================================================================== */
+
+.timeline-section {
+    background-color: var(--color-bg-secondary);
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 4rem auto 0 auto;
+    padding-left: 50px; /* space for the timeline line */
+}
+
+/* Vertical Timeline Line */
+.timeline-progress-line {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 2px;
+    height: calc(100% - 30px);
+    background-color: rgba(200, 160, 77, 0.1);
+}
+
+.timeline-progress-fill {
+    width: 100%;
+    height: 0%; /* updated via JS on scroll */
+    background-color: var(--color-accent-gold);
+    transition: height 0.1s ease;
+}
+
+/* Timeline Step Cards */
+.timeline-step {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.timeline-step:last-child {
+    margin-bottom: 0;
+}
+
+/* Step marker dot/circle */
+.step-marker {
+    position: absolute;
+    top: 5px;
+    left: -42px; /* aligns directly on the progress line */
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: var(--color-bg-secondary);
+    border: 2px solid rgba(200, 160, 77, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    transition: var(--transition-smooth);
+    z-index: 5;
+}
+
+/* Active Step Marker */
+.timeline-step.active .step-marker {
+    background-color: var(--color-accent-gold);
+    border-color: var(--color-accent-gold);
+    color: var(--color-bg-contrast);
+    box-shadow: 0 0 12px rgba(200, 160, 77, 0.4);
+}
+
+/* Step Content Card */
+.step-content {
+    padding: 1.5rem 1.8rem;
+    transition: var(--transition-smooth);
+    border-color: rgba(200, 160, 77, 0.08);
+}
+
+.step-content h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-primary);
+}
+
+.step-content p {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.55;
+}
+
+/* Hover effects */
+.timeline-step:hover .step-content {
+    transform: translateX(6px);
+    border-color: rgba(200, 160, 77, 0.25);
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 10px 25px -15px rgba(26, 22, 18, 0.08);
+}
+
+.timeline-step:hover .step-marker {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .timeline-container {
+        padding-left: 36px;
+    }
+    
+    .timeline-progress-line {
+        left: 14px;
+    }
+    
+    .step-marker {
+        left: -32px;
+        width: 22px;
+        height: 22px;
+        font-size: 0.7rem;
+    }
+    
+    .step-content {
+        padding: 1.2rem 1.4rem;
+    }
+}

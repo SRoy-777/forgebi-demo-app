@@ -1,0 +1,315 @@
+/* ==========================================================================
+   Platform Overview (Interactive Department Section) Stylesheet
+   ========================================================================== */
+
+.platform-section {
+    background-color: var(--color-bg-primary);
+}
+
+.platform-interactive-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 3.5rem;
+    align-items: start;
+    margin-top: 2rem;
+}
+
+/* Left Department Cards List */
+.department-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.dept-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.2rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    background-color: transparent;
+}
+
+.dept-number {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    transition: var(--transition-fast);
+    padding-top: 2px;
+}
+
+.dept-info h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--color-text-primary);
+    transition: var(--transition-fast);
+}
+
+.dept-info p {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    line-height: 1.45;
+}
+
+/* Active State & Hover Styling */
+.dept-card:hover {
+    background-color: rgba(243, 239, 234, 0.4);
+}
+
+.dept-card.active {
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid var(--color-border-light);
+    box-shadow: 0 10px 25px -15px rgba(26, 22, 18, 0.08);
+}
+
+.dept-card.active .dept-number {
+    color: var(--color-accent-gold);
+}
+
+.dept-card.active .dept-info h4 {
+    color: var(--color-accent-gold);
+}
+
+/* Right Browser Showcase Display Frame */
+.department-display {
+    position: sticky;
+    top: 100px;
+    z-index: 10;
+}
+
+.browser-container {
+    width: 100%;
+    background-color: #FAF8F5;
+    border: 1px solid var(--color-border-light);
+    border-radius: 12px;
+    box-shadow: 0 30px 60px -25px rgba(26, 22, 18, 0.08),
+                0 0 50px -20px rgba(200, 160, 77, 0.08);
+    overflow: hidden;
+}
+
+.browser-bar {
+    display: flex;
+    align-items: center;
+    padding: 0.65rem 1.25rem;
+    background-color: var(--color-bg-secondary);
+    border-bottom: 1px solid rgba(200, 160, 77, 0.08);
+}
+
+.browser-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.browser-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: var(--color-text-muted);
+    opacity: 0.5;
+}
+
+.browser-address {
+    margin-left: 2rem;
+    font-size: 0.72rem;
+    color: var(--color-text-secondary);
+    font-family: var(--font-body);
+}
+
+.browser-content {
+    min-height: 380px;
+    position: relative;
+    padding: 24px;
+    background: #FFFFFF;
+}
+
+/* Dashboard Mock Previews Transitions */
+.dept-preview {
+    display: none;
+    opacity: 0;
+    transform: scale(0.98);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.dept-preview.active {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.dept-preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(26, 22, 18, 0.05);
+    padding-bottom: 12px;
+}
+
+.dept-preview-header h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.badge-gold-outline {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--color-accent-gold);
+    border: 1px solid var(--color-accent-gold);
+    padding: 2px 8px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+/* Metrics Preview Grid */
+.preview-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.preview-metric-box {
+    border: 1px solid rgba(26, 22, 18, 0.06);
+    border-radius: 8px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.preview-metric-box span {
+    font-size: 0.72rem;
+    color: var(--color-text-secondary);
+}
+
+.preview-metric-box h4 {
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+.preview-metric-box small {
+    font-size: 0.65rem;
+    font-weight: 700;
+}
+
+.preview-metric-box small.positive { color: #72B095; }
+.preview-metric-box small.negative { color: #E26D5C; }
+
+/* Chart Mockups */
+.preview-bar-chart {
+    border: 1px solid rgba(26, 22, 18, 0.06);
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bar-chart-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.mock-bars {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 120px;
+    padding-top: 10px;
+}
+
+.mock-bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 40px;
+    height: 100%;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.bar-actual {
+    width: 10px;
+    background-color: var(--color-accent-gold);
+    border-radius: 2px;
+    transition: height 0.6s ease;
+}
+
+.bar-target {
+    width: 6px;
+    background-color: var(--color-text-muted);
+    opacity: 0.3;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 22px;
+    left: 20px;
+}
+
+.bar-label {
+    font-size: 0.65rem;
+    color: var(--color-text-muted);
+}
+
+/* Secondary table layout mock for lists */
+.preview-table-mock {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(26, 22, 18, 0.06);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-row-mock {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 8px 12px;
+    font-size: 0.75rem;
+    border-bottom: 1px solid rgba(26, 22, 18, 0.04);
+}
+
+.table-row-mock:last-child {
+    border-bottom: none;
+}
+
+.table-row-mock.header {
+    background-color: var(--color-bg-secondary);
+    font-weight: 700;
+}
+
+/* Custom list items for project blocks */
+.preview-list-mock {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.list-item-mock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: var(--color-bg-secondary);
+    font-size: 0.75rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .platform-interactive-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .department-display {
+        position: static;
+    }
+}

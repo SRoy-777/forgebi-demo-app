@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Performance Section (Designed for Speed) Stylesheet
+   ========================================================================== */
+
+.performance-section {
+    background-color: var(--color-bg-primary);
+}
+
+/* Horizontal Flow Layout */
+.performance-pipeline-wrapper {
+    margin: 4rem 0 3rem 0;
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+.pipeline-flow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 800px;
+    position: relative;
+    max-width: var(--max-width-container);
+    margin: 0 auto;
+}
+
+/* Pipeline Node Styles */
+.pipeline-node {
+    flex: 1;
+    max-width: 200px;
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border-light);
+    border-radius: 8px;
+    padding: 1.5rem 1.2rem;
+    text-align: center;
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.node-icon {
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+.pipeline-node h5 {
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.pipeline-node p {
+    font-size: 0.72rem;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+}
+
+/* Node Highlight Variation */
+.pipeline-node.highlight {
+    background-color: #FFFFFF;
+    border-color: rgba(200, 160, 77, 0.25);
+    box-shadow: 0 10px 25px -15px rgba(26, 22, 18, 0.08);
+}
+
+/* Gold Node Final variation */
+.pipeline-node.gold-node {
+    background-color: var(--color-bg-contrast);
+    color: var(--color-text-light);
+    border-color: var(--color-accent-gold);
+    box-shadow: 0 12px 30px -10px rgba(200, 160, 77, 0.2);
+}
+
+.pipeline-node.gold-node h5 {
+    color: var(--color-accent-gold);
+}
+
+.pipeline-node.gold-node p {
+    color: var(--color-text-muted);
+}
+
+/* Pipeline Connectors & Flow Arrows */
+.pipeline-connector {
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.flow-arrow-svg {
+    width: 100%;
+    height: auto;
+}
+
+/* Animation of arrow data packets */
+.flow-arrow-svg line {
+    animation: flowData 2s infinite linear;
+}
+
+@keyframes flowData {
+    0% {
+        stroke-dashoffset: 24;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.performance-explanation {
+    max-width: 700px;
+    margin: 2.5rem auto 0 auto;
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* Node Hover triggers */
+.pipeline-node:hover {
+    transform: translateY(-6px);
+}
+
+.pipeline-node.gold-node:hover {
+    box-shadow: 0 15px 35px -8px rgba(200, 160, 77, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .performance-pipeline-wrapper {
+        overflow-x: scroll; /* Allow swiping horizontally on small screens */
+    }
+}

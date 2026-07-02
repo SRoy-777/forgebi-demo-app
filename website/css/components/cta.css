@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Call To Action (CTA Section) Stylesheet
+   ========================================================================== */
+
+.cta-section {
+    background-color: var(--color-bg-contrast-light);
+    color: var(--color-text-light);
+    padding: 6.5rem 0;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: var(--max-width-container);
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(200, 160, 77, 0.06) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.cta-title {
+    color: var(--color-text-light);
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.cta-subtitle {
+    color: var(--color-text-muted);
+    font-size: 1.15rem;
+    max-width: 580px;
+    margin: 0 auto 2.5rem auto;
+    line-height: 1.6;
+}
+
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cta-title {
+        font-size: 2.25rem;
+    }
+    
+    .cta-actions {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    
+    .cta-actions .btn {
+        width: 100%;
+    }
+}

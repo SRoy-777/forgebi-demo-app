@@ -1,0 +1,175 @@
+/* ==========================================================================
+   Security Section (Data Governance) Stylesheet
+   ========================================================================== */
+
+.security-section {
+    background-color: var(--color-bg-contrast);
+    color: var(--color-text-light);
+    overflow: hidden;
+}
+
+.security-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4.5rem;
+    align-items: center;
+}
+
+/* Section overrides for dark theme */
+.security-section .section-title {
+    color: var(--color-text-light);
+}
+
+.security-section .section-subtitle {
+    color: var(--color-text-muted);
+    margin-bottom: 2.5rem;
+}
+
+/* Security list items details */
+.security-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.security-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.sec-item-bullet {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(200, 160, 77, 0.15);
+    border: 1px solid var(--color-accent-gold);
+    color: var(--color-accent-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.security-list-item h5 {
+    color: var(--color-text-light);
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.security-list-item p {
+    color: var(--color-text-muted);
+    font-size: 0.88rem;
+    line-height: 1.45;
+}
+
+/* Right side Shield Graphic illustration */
+.security-graphic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.security-graphic-container::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(200, 160, 77, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.security-shield-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--color-border-contrast);
+    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.3);
+    padding: 2.2rem 1.8rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    backdrop-filter: blur(16px);
+}
+
+.shield-circle {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: rgba(200, 160, 77, 0.08);
+    border: 1.5px solid var(--color-accent-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(200, 160, 77, 0.15);
+}
+
+.shield-svg {
+    width: 32px;
+    height: 32px;
+}
+
+.security-shield-card h4 {
+    color: var(--color-text-light);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.shield-auth-lines {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.auth-line-mock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    font-size: 0.72rem;
+    color: var(--color-text-muted);
+}
+
+.auth-line-mock span:nth-child(2) {
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 4px;
+}
+
+.green-mock {
+    border-left: 3px solid #72B095;
+}
+
+.green-mock span:nth-child(2) {
+    background-color: rgba(114, 176, 149, 0.15);
+    color: #72B095;
+}
+
+.gold-mock {
+    border-left: 3px solid var(--color-accent-gold);
+}
+
+.gold-mock span:nth-child(2) {
+    background-color: var(--color-accent-gold-rgba);
+    color: var(--color-accent-gold);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .security-layout {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+    }
+}

@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Why Choose ForgeBI Section Stylesheet
+   ========================================================================== */
+
+.why-section {
+    background-color: var(--color-bg-secondary);
+    position: relative;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+    margin-top: 2rem;
+}
+
+/* Card Styling */
+.why-card {
+    padding: 2.2rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: var(--transition-smooth);
+    height: 100%;
+}
+
+.why-card-icon-container {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: rgba(200, 160, 77, 0.08);
+    border: 1px solid rgba(200, 160, 77, 0.2);
+    color: var(--color-accent-gold);
+    margin-bottom: 1.5rem;
+    transition: var(--transition-smooth);
+}
+
+.why-card-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.why-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.85rem;
+    color: var(--color-text-primary);
+}
+
+.why-card-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+}
+
+/* Hover Elevation & Shadow Effects */
+.why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -20px rgba(26, 22, 18, 0.15),
+                0 0 30px -10px rgba(200, 160, 77, 0.2);
+    border-color: rgba(200, 160, 77, 0.4);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.why-card:hover .why-card-icon-container {
+    background-color: var(--color-accent-gold);
+    color: var(--color-bg-contrast);
+    transform: scale(1.05) rotate(4deg);
+    box-shadow: 0 4px 10px rgba(200, 160, 77, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .why-card {
+        padding: 1.8rem 1.5rem;
+    }
+}

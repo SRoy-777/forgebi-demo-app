@@ -149,6 +149,24 @@ server = app.server
 
 
 # ---------------------------------------------------
+# Website Landing Page serving
+# ---------------------------------------------------
+from flask import send_from_directory, redirect
+
+WEBSITE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "website"))
+
+@server.route('/')
+def serve_website():
+    if session.get('logged_in'):
+        return redirect('/home')
+    return send_from_directory(WEBSITE_DIR, 'index.html')
+
+@server.route('/website-assets/<path:filename>')
+def serve_website_assets(filename):
+    return send_from_directory(WEBSITE_DIR, filename)
+
+
+# ---------------------------------------------------
 # Session Configuration
 # ---------------------------------------------------
 
@@ -373,7 +391,7 @@ def display_page(pathname):
 
         log_activity(session.get('email'), db_name)
 
-    elif pathname == '/' or pathname == '':
+    elif pathname == '/' or pathname == '' or pathname == '/home':
 
         from backend.services.activity_logger import log_activity
 
@@ -957,7 +975,7 @@ def login_user(
 
     if user is None:
 
-        return "Invalid Email or Password", '/'
+        return "Invalid Email or Password", '/login'
 
 
     # ---------------------------------------------------
@@ -979,7 +997,7 @@ def login_user(
     session['session_version'] = SESSION_VERSION
 
 
-    return "", "/"
+    return "", "/home"
 
 
 # ---------------------------------------------------

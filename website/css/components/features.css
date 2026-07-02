@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Feature Grid Stylesheet
+   ========================================================================== */
+
+.features-section {
+    background-color: var(--color-bg-secondary);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    padding: 1.8rem 1.5rem;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(200, 160, 77, 0.08);
+}
+
+.feature-icon {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    line-height: 1;
+}
+
+.feature-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-primary);
+}
+
+.feature-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+/* Hover effects */
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -10px rgba(26, 22, 18, 0.08),
+                0 0 20px -5px rgba(200, 160, 77, 0.12);
+    border-color: rgba(200, 160, 77, 0.25);
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Features Icon hover animation */
+.feature-card:hover .feature-icon {
+    animation: wiggle 0.5s ease-in-out;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0); }
+    25% { transform: rotate(-8deg) scale(1.1); }
+    75% { transform: rotate(8deg) scale(1.1); }
+}
