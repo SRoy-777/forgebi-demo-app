@@ -381,3 +381,1104 @@
 }
 
 
+/* ==========================================================================
+   ATELIER Fashion / Apparel Premium BI Workspace Overrides
+   ========================================================================== */
+
+/* 1. Base Workspace Makeover */
+.fashion-workspace {
+    background-color: #F4EFEB !important; /* Soft premium rose-cream silk background */
+    background-image: radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+                      radial-gradient(circle at 90% 80%, rgba(26, 26, 26, 0.03) 0%, transparent 50%) !important;
+    transition: all 0.5s ease-in-out !important;
+}
+
+.fashion-workspace.inv-premium-page-gold-dark {
+    background-color: #161514 !important; /* Velvet midnight black */
+    background-image: radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 45%) !important;
+}
+
+/* Typography Editorial Settings */
+.fashion-workspace #home-header-title {
+    font-family: 'Cinzel', 'Playfair Display', 'Didot', 'Georgia', serif !important;
+    font-size: 2.6rem !important;
+    font-weight: 300 !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase !important;
+    color: #1A1A1A !important;
+    margin-top: 1.5rem !important;
+}
+
+.inv-premium-page-gold-dark.fashion-workspace #home-header-title {
+    color: #F4EFEB !important;
+}
+
+.fashion-workspace #home-header-tagline {
+    font-family: 'Montserrat', sans-serif !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    color: #B37D7D !important; /* Muted rose gold accent */
+}
+
+.fashion-workspace #home-header-mouldnote {
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic !important;
+    font-size: 1.1rem !important;
+    color: #7D6B58 !important;
+}
+
+.inv-premium-page-gold-dark.fashion-workspace #home-header-mouldnote {
+    color: #C3B4A2 !important;
+}
+
+/* Logo Rebranding */
+.fashion-workspace #home-logo-text {
+    font-family: 'Cinzel', serif !important;
+    font-size: 3rem !important;
+    font-weight: 300 !important;
+    color: #1A1A1A !important;
+    letter-spacing: 8px !important;
+    border-bottom: 1.5px solid #D4AF37;
+    padding-bottom: 6px;
+    margin-bottom: 2rem !important;
+}
+
+.inv-premium-page-gold-dark.fashion-workspace #home-logo-text {
+    color: #D4AF37 !important;
+    border-color: #D4AF37;
+}
+
+/* 2. Premium Module Card Transformations */
+.fashion-workspace .premium-module-card {
+    background-color: rgba(255, 255, 255, 0.65) !important;
+    border: 1px solid rgba(26, 26, 26, 0.12) !important;
+    border-radius: 4px !important; /* Modern boxy minimalist editorial style */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important;
+    padding: 1rem 0.5rem !important;
+}
+
+.inv-premium-page-gold-dark.fashion-workspace .premium-module-card {
+    background-color: rgba(26, 25, 24, 0.85) !important;
+    border: 1px solid rgba(212, 175, 55, 0.22) !important;
+}
+
+.fashion-workspace .premium-module-card:hover {
+    background-color: #FFFFFF !important;
+    border-color: #D4AF37 !important;
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.12) !important;
+    transform: translateY(-4px) !important;
+}
+
+.inv-premium-page-gold-dark.fashion-workspace .premium-module-card:hover {
+    background-color: #1C1B1A !important;
+    border-color: #D4AF37 !important;
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.25) !important;
+}
+
+/* Card Titles */
+.fashion-workspace .module-title {
+    font-family: 'Cinzel', 'Playfair Display', serif !important;
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    color: #1A1A1A !important;
+    text-align: center !important;
+    margin-top: 0.5rem !important;
+}
+
+.inv-premium-page-gold-dark.fashion-workspace .module-title {
+    color: #D4AF37 !important;
+}
+
+/* Card Descriptions */
+.fashion-workspace .module-desc {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.85rem !important;
+    line-height: 1.6 !important;
+    color: #5A544F !important;
+    text-align: center !important;
+    min-height: 60px !important;
+}
+
+.inv-premium-page-gold-dark.fashion-workspace .module-desc {
+    color: #C3BDB3 !important;
+}
+
+/* Card Button: Luxury Minimalist Look */
+.fashion-workspace .module-btn {
+    background: #1A1A1A !important;
+    border: 1px solid #1A1A1A !important;
+    color: #FFF !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    font-weight: 700 !important;
+    border-radius: 2px !important; /* Boxy buttons */
+    padding: 10px 0 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: none !important;
+}
+
+.inv-premium-page-gold-dark.fashion-workspace .module-btn {
+    background: transparent !important;
+    border: 1.5px solid #D4AF37 !important;
+    color: #D4AF37 !important;
+}
+
+.fashion-workspace .module-btn:hover {
+    background: #D4AF37 !important;
+    border-color: #D4AF37 !important;
+    color: #1A1A1A !important;
+    letter-spacing: 2.5px !important; /* Luxury breathing hover effect */
+}
+
+.inv-premium-page-gold-dark.fashion-workspace .module-btn:hover {
+    background: #D4AF37 !important;
+    color: #1C1B1A !important;
+}
+
+/* Card Icon Makeover */
+.fashion-workspace .module-icon {
+    font-size: 2.2rem !important;
+    display: block !important;
+    text-align: center !important;
+    margin-bottom: 8px !important;
+    opacity: 0.85;
+}
+
+/* Button & UI elements */
+.fashion-workspace .home-mould-btn {
+    border-color: #1A1A1A !important;
+    color: #1A1A1A !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.inv-premium-page-gold-dark.fashion-workspace .home-mould-btn {
+    border-color: #D4AF37 !important;
+    color: #D4AF37 !important;
+}
+
+.fashion-workspace .home-mould-btn:hover {
+    background-color: #1A1A1A !important;
+    color: #FFF !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.inv-premium-page-gold-dark.fashion-workspace .home-mould-btn:hover {
+    background-color: #D4AF37 !important;
+    color: #1C1B1A !important;
+}
+
+/* Search and Menu buttons */
+.fashion-workspace .home-theme-icon-btn {
+    border-color: #1A1A1A !important;
+    background-color: transparent !important;
+    color: #1A1A1A !important;
+    border-radius: 4px !important; /* Square controls */
+}
+
+.inv-premium-page-gold-dark.fashion-workspace .home-theme-icon-btn {
+    border-color: #D4AF37 !important;
+    background-color: rgba(255,255,255,0.05) !important;
+    color: #D4AF37 !important;
+    border-radius: 4px !important;
+}
+
+
+/* ==========================================================================
+   Structural Skeleton Overrides for the Fashion Theme
+   ========================================================================== */
+
+.fashion-layout-wrapper {
+    padding: 3rem 1.5rem !important;
+    min-height: 80vh;
+}
+
+/* Left Panel Style */
+.fashion-left-panel {
+    background-color: rgba(255, 255, 255, 0.45) !important;
+    border: 1px solid rgba(26, 26, 26, 0.1) !important;
+    padding: 3rem 2rem !important;
+    border-radius: 4px !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01) !important;
+}
+
+.inv-premium-page-gold-dark .fashion-left-panel {
+    background-color: rgba(26, 25, 24, 0.6) !important;
+    border: 1px solid rgba(212, 175, 55, 0.15) !important;
+}
+
+.fashion-brand-sup {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.85rem !important;
+    font-weight: 400 !important;
+    letter-spacing: 6px !important;
+    text-transform: uppercase !important;
+    color: #5A544F !important;
+}
+
+.inv-premium-page-gold-dark .fashion-brand-sup {
+    color: #C3BDB3 !important;
+}
+
+.fashion-brand-main {
+    font-family: 'Cinzel', serif !important;
+    font-size: 2.8rem !important;
+    font-weight: 300 !important;
+    letter-spacing: 4px !important;
+    text-transform: uppercase !important;
+    color: #1A1A1A !important;
+    margin: 0.5rem 0;
+}
+
+.inv-premium-page-gold-dark .fashion-brand-main {
+    color: #D4AF37 !important;
+}
+
+.fashion-brand-sub {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.7rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 2px !important;
+    color: #7D6B58 !important;
+}
+
+.inv-premium-page-gold-dark .fashion-brand-sub {
+    color: #C3B4A2 !important;
+}
+
+/* Statistics inside Billboard Panel */
+.fashion-stats-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.fashion-stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.fashion-stat-item span {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.7rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 1.5px !important;
+    color: #7D6B58 !important;
+    text-transform: uppercase;
+}
+
+.inv-premium-page-gold-dark .fashion-stat-item span {
+    color: #C3B4A2 !important;
+}
+
+.fashion-stat-item strong {
+    font-family: 'Cinzel', serif !important;
+    font-size: 1.6rem !important;
+    font-weight: 400 !important;
+    color: #1A1A1A !important;
+    margin-top: 0.2rem;
+}
+
+.inv-premium-page-gold-dark .fashion-stat-item strong {
+    color: #F4EFEB !important;
+}
+
+/* Left panel controls group */
+.fashion-controls-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: auto;
+}
+
+.fashion-control-btn-mould {
+    flex: 1;
+    background-color: #1A1A1A !important;
+    border: 1px solid #1A1A1A !important;
+    color: #FFF !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    font-weight: 600 !important;
+    border-radius: 2px !important;
+    padding: 10px 0 !important;
+    transition: all 0.3s ease !important;
+}
+
+.inv-premium-page-gold-dark .fashion-control-btn-mould {
+    background-color: transparent !important;
+    border-color: #D4AF37 !important;
+    color: #D4AF37 !important;
+}
+
+.fashion-control-btn-mould:hover {
+    background-color: #D4AF37 !important;
+    border-color: #D4AF37 !important;
+    color: #1A1A1A !important;
+}
+
+.inv-premium-page-gold-dark .fashion-control-btn-mould:hover {
+    background-color: #D4AF37 !important;
+    color: #161514 !important;
+}
+
+.fashion-control-btn-theme {
+    width: 42px;
+    height: 42px;
+    background-color: transparent !important;
+    border: 1px solid rgba(26, 26, 26, 0.2) !important;
+    color: #1A1A1A !important;
+    font-size: 1.1rem !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px !important;
+    transition: all 0.3s ease !important;
+}
+
+.inv-premium-page-gold-dark .fashion-control-btn-theme {
+    border-color: rgba(212, 175, 55, 0.3) !important;
+    color: #D4AF37 !important;
+}
+
+.fashion-control-btn-theme:hover {
+    border-color: #D4AF37 !important;
+    background-color: rgba(212, 175, 55, 0.05) !important;
+}
+
+/* Right Collection List Index */
+.fashion-right-panel {
+    padding: 0 1rem 0 3rem !important;
+}
+
+@media (max-width: 768px) {
+    .fashion-right-panel {
+        padding: 2rem 0 0 0 !important;
+    }
+}
+
+.fashion-collection-title {
+    font-family: 'Cinzel', serif !important;
+    font-size: 1.8rem !important;
+    font-weight: 300 !important;
+    letter-spacing: 4px !important;
+    text-transform: uppercase !important;
+    color: #1A1A1A !important;
+    margin-bottom: 2.5rem !important;
+    border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+    padding-bottom: 1rem;
+}
+
+.inv-premium-page-gold-dark .fashion-collection-title {
+    color: #F4EFEB !important;
+    border-color: rgba(212, 175, 55, 0.15) !important;
+}
+
+.fashion-catalog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Lookbook Catalog Row Skeleton */
+.fashion-row {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0 !important;
+    border-bottom: 1px solid rgba(26, 26, 26, 0.08) !important;
+    transition: all 0.3s ease !important;
+    position: relative;
+}
+
+.inv-premium-page-gold-dark .fashion-row {
+    border-color: rgba(212, 175, 55, 0.1) !important;
+}
+
+.fashion-row:hover {
+    padding-left: 1rem !important;
+    background-color: rgba(212, 175, 55, 0.03) !important;
+}
+
+.fashion-number {
+    font-family: 'Cinzel', serif !important;
+    font-size: 1.4rem !important;
+    font-weight: 400 !important;
+    color: #7D6B58 !important;
+    width: 60px;
+    flex-shrink: 0;
+}
+
+.inv-premium-page-gold-dark .fashion-number {
+    color: #D4AF37 !important;
+}
+
+.fashion-info {
+    flex-grow: 1;
+}
+
+.fashion-title {
+    font-family: 'Cinzel', 'Playfair Display', serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 1.5px !important;
+    color: #1A1A1A !important;
+    margin: 0 0 0.25rem 0 !important;
+    text-transform: uppercase;
+}
+
+.inv-premium-page-gold-dark .fashion-title {
+    color: #F4EFEB !important;
+}
+
+.fashion-desc {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+    color: #5A544F !important;
+    margin: 0 !important;
+    min-height: 0 !important;
+}
+
+.inv-premium-page-gold-dark .fashion-desc {
+    color: #C3BDB3 !important;
+}
+
+.fashion-link {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    color: #7D6B58 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    white-space: nowrap;
+}
+
+.inv-premium-page-gold-dark .fashion-link {
+    color: #D4AF37 !important;
+}
+
+.fashion-link:hover {
+    color: #1A1A1A !important;
+    transform: translateX(5px);
+}
+
+.inv-premium-page-gold-dark .fashion-link:hover {
+    color: #FFF !important;
+}
+
+
+/* ==========================================================================
+   Structural Skeleton Overrides for the Manufacturing Theme
+   ========================================================================== */
+
+/* 1. Base Workspace Makeover */
+.factory-workspace {
+    background-color: #0E1113 !important; /* Gunmetal Steel Black */
+    background-image: linear-gradient(0deg, transparent 24%, rgba(0, 230, 118, 0.02) 25%, rgba(0, 230, 118, 0.02) 26%, transparent 27%, transparent 74%, rgba(0, 230, 118, 0.02) 75%, rgba(0, 230, 118, 0.02) 76%, transparent 77%, transparent),
+                      linear-gradient(90deg, transparent 24%, rgba(0, 230, 118, 0.02) 25%, rgba(0, 230, 118, 0.02) 26%, transparent 27%, transparent 74%, rgba(0, 230, 118, 0.02) 75%, rgba(0, 230, 118, 0.02) 76%, transparent 77%, transparent) !important;
+    background-size: 50px 50px !important; /* Grid lines */
+    transition: all 0.5s ease-in-out !important;
+}
+
+.factory-workspace.inv-premium-page-gold {
+    background-color: #ECEFF1 !important; /* Light steel floor gray */
+    background-image: linear-gradient(0deg, transparent 24%, rgba(114, 176, 149, 0.05) 25%, rgba(114, 176, 149, 0.05) 26%, transparent 27%, transparent 74%, rgba(114, 176, 149, 0.05) 75%, rgba(114, 176, 149, 0.05) 76%, transparent 77%, transparent),
+                      linear-gradient(90deg, transparent 24%, rgba(114, 176, 149, 0.05) 25%, rgba(114, 176, 149, 0.05) 26%, transparent 27%, transparent 74%, rgba(114, 176, 149, 0.05) 75%, rgba(114, 176, 149, 0.05) 76%, transparent 77%, transparent) !important;
+}
+
+/* Left Panel Style */
+.factory-left-panel {
+    background-color: #1A1F24 !important; /* Dark machinery steel plate */
+    border: 2px solid #2A353F !important;
+    border-top: 4px solid #00E676 !important; /* Glow cyber bar */
+    padding: 2.5rem 1.5rem !important;
+    border-radius: 4px !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
+.factory-workspace.inv-premium-page-gold .factory-left-panel {
+    background-color: #FFFFFF !important;
+    border: 2px solid #CFD8DC !important;
+    border-top: 4px solid #72B095 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+.factory-tag {
+    font-family: 'Share Tech Mono', monospace !important;
+    font-size: 0.75rem !important;
+    font-weight: bold !important;
+    background-color: rgba(0, 230, 118, 0.15);
+    color: #00E676 !important;
+    padding: 2px 8px;
+    border-radius: 2px;
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.factory-workspace.inv-premium-page-gold .factory-tag {
+    background-color: rgba(114, 176, 149, 0.15);
+    color: #72B095 !important;
+}
+
+.factory-brand-main {
+    font-family: 'Share Tech Mono', monospace !important;
+    font-size: 2.4rem !important;
+    font-weight: bold !important;
+    color: #F4EFEB !important;
+    letter-spacing: 2px;
+}
+
+.factory-workspace.inv-premium-page-gold .factory-brand-main {
+    color: #263238 !important;
+}
+
+.factory-brand-sub {
+    font-family: 'Share Tech Mono', monospace !important;
+    font-size: 0.75rem !important;
+    color: #90A4AE !important;
+    letter-spacing: 1px;
+}
+
+/* Telemetry Items */
+.factory-telemetry-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.factory-telemetry-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.factory-telemetry-item span {
+    font-family: 'Share Tech Mono', monospace !important;
+    font-size: 0.7rem !important;
+    color: #90A4AE !important;
+    text-transform: uppercase;
+}
+
+.factory-telemetry-item strong {
+    font-family: 'Share Tech Mono', monospace !important;
+    font-size: 1.4rem !important;
+    color: #00E676 !important;
+    margin: 0.2rem 0 0.4rem 0;
+}
+
+.factory-workspace.inv-premium-page-gold .factory-telemetry-item strong {
+    color: #72B095 !important;
+}
+
+/* Rugged Progress Bar */
+.factory-progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #2A353F;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.factory-workspace.inv-premium-page-gold .factory-progress-bar {
+    background-color: #ECEFF1;
+}
+
+.factory-progress-fill {
+    height: 100%;
+    background-color: #00E676;
+    border-radius: 2px;
+}
+
+.factory-workspace.inv-premium-page-gold .factory-progress-fill {
+    background-color: #72B095;
+}
+
+/* Left panel controls */
+.factory-controls-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.factory-control-btn {
+    flex: 1;
+    background-color: #CFD8DC !important;
+    border: 1px solid #CFD8DC !important;
+    color: #263238 !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    font-size: 0.75rem !important;
+    font-weight: bold !important;
+    border-radius: 2px !important;
+    padding: 10px 0 !important;
+    transition: all 0.2s ease !important;
+}
+
+.factory-workspace .factory-control-btn {
+    background-color: #2A353F !important;
+    border-color: #2A353F !important;
+    color: #FFF !important;
+}
+
+.factory-control-btn:hover {
+    background-color: #00E676 !important;
+    border-color: #00E676 !important;
+    color: #1A1F24 !important;
+}
+
+.factory-workspace.inv-premium-page-gold .factory-control-btn:hover {
+    background-color: #72B095 !important;
+    border-color: #72B095 !important;
+    color: #FFF !important;
+}
+
+.factory-control-btn-theme {
+    width: 42px;
+    height: 42px;
+    background-color: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #FFF !important;
+    font-size: 1.1rem !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px !important;
+    transition: all 0.3s ease !important;
+}
+
+.factory-workspace.inv-premium-page-gold .factory-control-btn-theme {
+    border-color: rgba(0, 0, 0, 0.15) !important;
+    color: #263238 !important;
+}
+
+.factory-control-btn-theme:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: #00E676 !important;
+}
+
+/* Center Operations Grid */
+.factory-center-panel {
+    padding: 0 1.5rem !important;
+}
+
+.factory-section-title {
+    font-family: 'Share Tech Mono', monospace !important;
+    font-size: 1.4rem !important;
+    font-weight: bold !important;
+    color: #90A4AE !important;
+    letter-spacing: 2px;
+    margin-bottom: 2rem !important;
+    text-transform: uppercase;
+}
+
+.factory-workspace.inv-premium-page-gold .factory-section-title {
+    color: #37474F !important;
+}
+
+/* Machinery Cards Grid */
+.factory-card {
+    background-color: #12161A !important;
+    border: 1.5px solid #202830 !important;
+    border-radius: 2px !important;
+    padding: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+.factory-workspace.inv-premium-page-gold .factory-card {
+    background-color: #FFFFFF !important;
+    border: 1.5px solid #CFD8DC !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02) !important;
+}
+
+.factory-card:hover {
+    border-color: #00E676 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 230, 118, 0.1) !important;
+}
+
+.factory-workspace.inv-premium-page-gold .factory-card:hover {
+    border-color: #72B095 !important;
+    box-shadow: 0 10px 25px rgba(114, 176, 149, 0.15) !important;
+}
+
+.factory-node-id {
+    font-family: 'Share Tech Mono', monospace !important;
+    font-size: 0.65rem !important;
+    color: #546E7A !important;
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    letter-spacing: 1px;
+}
+
+.factory-card-title {
+    font-family: 'Share Tech Mono', monospace !important;
+    font-size: 1.15rem !important;
+    color: #ECEFF1 !important;
+    font-weight: bold !important;
+    margin-bottom: 0.6rem !important;
+}
+
+.factory-workspace.inv-premium-page-gold .factory-card-title {
+    color: #263238 !important;
+}
+
+.factory-card-desc {
+    font-family: 'Share Tech Mono', monospace !important;
+    font-size: 0.8rem !important;
+    color: #90A4AE !important;
+    line-height: 1.4 !important;
+    margin-bottom: 1.25rem !important;
+    min-height: 48px;
+}
+
+.factory-workspace.inv-premium-page-gold .factory-card-desc {
+    color: #607D8B !important;
+}
+
+.factory-card-btn {
+    background-color: transparent !important;
+    border: 1px solid #202830 !important;
+    color: #90A4AE !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    font-size: 0.7rem !important;
+    width: 100%;
+    padding: 8px 0 !important;
+    font-weight: bold !important;
+    border-radius: 2px !important;
+    transition: all 0.2s ease !important;
+}
+
+.factory-workspace.inv-premium-page-gold .factory-card-btn {
+    border-color: #CFD8DC !important;
+    color: #607D8B !important;
+}
+
+.factory-card:hover .factory-card-btn {
+    background-color: #00E676 !important;
+    border-color: #00E676 !important;
+    color: #12161A !important;
+}
+
+.factory-workspace.inv-premium-page-gold .factory-card:hover .factory-card-btn {
+    background-color: #72B095 !important;
+    border-color: #72B095 !important;
+    color: #FFF !important;
+}
+
+/* Right Console Live Logger */
+.factory-terminal-logs {
+    background-color: #080A0C !important;
+    border: 1.5px solid #1C2329 !important;
+    border-radius: 2px !important;
+    padding: 1.5rem !important;
+    height: 480px;
+    overflow-y: auto;
+    font-family: 'Share Tech Mono', monospace !important;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8) !important;
+}
+
+.factory-workspace.inv-premium-page-gold .factory-terminal-logs {
+    background-color: #1A2127 !important;
+    border: 1.5px solid #ECEFF1 !important;
+}
+
+.factory-log-line {
+    font-size: 0.8rem !important;
+    color: #90A4AE !important;
+    line-height: 1.6 !important;
+    margin-bottom: 0.4rem;
+    white-space: nowrap;
+}
+
+.factory-log-line.green {
+    color: #00E676 !important;
+    text-shadow: 0 0 4px rgba(0, 230, 118, 0.3);
+}
+
+.factory-log-line.orange {
+    color: #FF9100 !important;
+}
+
+.factory-log-line.blinking {
+    animation: blinkAnim 1s infinite alternate;
+}
+
+@keyframes blinkAnim {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
+
+
+/* ==========================================================================
+   Structural Skeleton Overrides for the Food & Beverage (F&B) Theme
+   ========================================================================== */
+
+/* 1. Base Workspace Makeover */
+.kitchen-workspace {
+    background-color: #FFFDF9 !important; /* Cream-vanilla bistro background */
+    background-image: radial-gradient(#E0D4C5 1px, transparent 1px) !important;
+    background-size: 24px 24px !important;
+    transition: all 0.5s ease-in-out !important;
+}
+
+.kitchen-workspace.inv-premium-page-gold-dark {
+    background-color: #1E1A17 !important; /* Warm espresso dark mode */
+    background-image: radial-gradient(#3E352F 1px, transparent 1px) !important;
+}
+
+/* Left Panel Style */
+.kitchen-left-panel {
+    background-color: #F7EFE5 !important; /* Bistro menu panel beige */
+    border: 2px dashed #D7CCC8 !important; /* Ticket-tear dash border */
+    padding: 2.5rem 1.5rem !important;
+    border-radius: 8px !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 24px rgba(62, 53, 47, 0.08) !important;
+}
+
+.kitchen-workspace.inv-premium-page-gold-dark .kitchen-left-panel {
+    background-color: #2D241E !important;
+    border-color: #4D3C32 !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+.kitchen-brand-main {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 2.2rem !important;
+    font-weight: bold !important;
+    color: #D84315 !important; /* Terracotta tomato */
+    letter-spacing: 1px;
+}
+
+.kitchen-brand-sub {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 0.7rem !important;
+    color: #5D4037 !important; /* Espresso brown */
+    letter-spacing: 1px;
+    margin-top: 0.25rem;
+}
+
+.kitchen-workspace.inv-premium-page-gold-dark .kitchen-brand-sub {
+    color: #D7CCC8 !important;
+}
+
+/* Bistro Stats Panel */
+.kitchen-stats-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+}
+
+.kitchen-stat-item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(141, 110, 99, 0.15);
+}
+
+.kitchen-stat-item span {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.75rem !important;
+    font-weight: bold !important;
+    color: #8D6E63 !important; /* Soft cocoa */
+}
+
+.kitchen-workspace.inv-premium-page-gold-dark .kitchen-stat-item span {
+    color: #B0BEC5 !important;
+}
+
+.kitchen-stat-item strong {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.5rem !important;
+    color: #2E7D32 !important; /* Basil Green */
+    margin-top: 0.3rem;
+}
+
+.kitchen-workspace.inv-premium-page-gold-dark .kitchen-stat-item strong {
+    color: #81C784 !important;
+}
+
+/* Left panel controls */
+.kitchen-controls-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.kitchen-control-btn {
+    flex: 1;
+    background-color: #D84315 !important; /* Terracotta Tomato Red */
+    border: 1px solid #D84315 !important;
+    color: #FFF !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.75rem !important;
+    font-weight: bold !important;
+    border-radius: 4px !important;
+    padding: 10px 0 !important;
+    transition: all 0.3s ease !important;
+}
+
+.kitchen-control-btn:hover {
+    background-color: #2E7D32 !important; /* Basil Green */
+    border-color: #2E7D32 !important;
+}
+
+.kitchen-control-btn-theme {
+    width: 42px;
+    height: 42px;
+    background-color: transparent !important;
+    border: 1px solid rgba(93, 64, 55, 0.2) !important;
+    color: #5D4037 !important;
+    font-size: 1.1rem !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px !important;
+    transition: all 0.3s ease !important;
+}
+
+.kitchen-workspace.inv-premium-page-gold-dark .kitchen-control-btn-theme {
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    color: #FFF !important;
+}
+
+.kitchen-control-btn-theme:hover {
+    background-color: rgba(93, 64, 55, 0.05) !important;
+    border-color: #D84315 !important;
+}
+
+/* Right Kitchen Station Board */
+.kitchen-right-panel {
+    padding: 0 1rem 0 2rem !important;
+}
+
+.kitchen-section-title {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.6rem !important;
+    font-weight: bold !important;
+    color: #5D4037 !important;
+    margin-bottom: 2rem !important;
+    border-bottom: 2px solid #D84315;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.kitchen-workspace.inv-premium-page-gold-dark .kitchen-section-title {
+    color: #D7CCC8 !important;
+}
+
+/* Recipe Ticket Cards */
+.kitchen-card {
+    background-color: #FFFFFF !important;
+    border: 1px solid #ECE0D1 !important;
+    border-top: 5px solid #2E7D32 !important; /* Basil green top border indicator */
+    border-radius: 6px !important;
+    padding: 1.75rem 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(93, 64, 55, 0.04) !important;
+    transition: all 0.3s ease !important;
+}
+
+.kitchen-workspace.inv-premium-page-gold-dark .kitchen-card {
+    background-color: #2D241E !important;
+    border: 1px solid #4D3C32 !important;
+    border-top-color: #81C784 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.kitchen-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(216, 67, 21, 0.12) !important;
+    border-color: #D84315 !important;
+}
+
+.kitchen-station-id {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 0.65rem !important;
+    color: #D84315 !important;
+    background-color: rgba(216, 67, 21, 0.08);
+    padding: 2px 6px;
+    border-radius: 4px;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    letter-spacing: 1px;
+}
+
+.kitchen-card-title {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.25rem !important;
+    color: #3E2723 !important; /* Warm dark brown */
+    font-weight: bold !important;
+    margin-bottom: 0.75rem !important;
+}
+
+.kitchen-workspace.inv-premium-page-gold-dark .kitchen-card-title {
+    color: #F5F5F5 !important;
+}
+
+.kitchen-card-desc {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.8rem !important;
+    color: #6D4C41 !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1.5rem !important;
+    min-height: 48px;
+}
+
+.kitchen-workspace.inv-premium-page-gold-dark .kitchen-card-desc {
+    color: #B0BEC5 !important;
+}
+
+.kitchen-card-btn {
+    background-color: transparent !important;
+    border: 1px solid #ECE0D1 !important;
+    color: #5D4037 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 0.75rem !important;
+    width: 100%;
+    padding: 8px 0 !important;
+    border-radius: 4px !important;
+    transition: all 0.2s ease !important;
+}
+
+.kitchen-workspace.inv-premium-page-gold-dark .kitchen-card-btn {
+    border-color: #4D3C32 !important;
+    color: #D7CCC8 !important;
+}
+
+.kitchen-card:hover .kitchen-card-btn {
+    background-color: #2E7D32 !important; /* Basil Green on Hover */
+    border-color: #2E7D32 !important;
+    color: #FFF !important;
+}
+
+

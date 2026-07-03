@@ -1,5 +1,5 @@
 from flask import session
-from dash import html, dcc, callback, Output, Input, State
+from dash import html, dcc, callback, Output, Input, State, callback_context
 import dash_bootstrap_components as dbc
 import os
 
@@ -33,6 +33,12 @@ def get_layout():
 
             [
                 dcc.Store(id='home-theme-store', data='light'),
+                dcc.Store(id='home-mould-store', data='default'),
+
+                html.Div(
+                    id="default-layout-container",
+                    style={'display': 'block'},
+                    children=[
 
                 # Menu Button at the extreme top left
                 dbc.Button(
@@ -70,6 +76,63 @@ def get_layout():
                     }
                 ),
 
+                # Atelier Theme Toggle Button
+                dbc.Button(
+                    "✨ Atelier Workspace",
+                    id="btn-toggle-mould",
+                    className="home-mould-btn",
+                    style={
+                        'position': 'absolute',
+                        'top': '15px',
+                        'right': '65px',
+                        'fontSize': '12px',
+                        'fontWeight': 'bold',
+                        'border': '1px solid #C8A04D',
+                        'backgroundColor': 'transparent',
+                        'color': '#C8A04D',
+                        'borderRadius': '20px',
+                        'padding': '5px 12px',
+                    }
+                ),
+
+                # Factory Theme Toggle Button beside Atelier Button
+                dbc.Button(
+                    "🏭 Factory Workspace",
+                    id="btn-toggle-mould-factory",
+                    className="home-mould-btn",
+                    style={
+                        'position': 'absolute',
+                        'top': '15px',
+                        'right': '215px',
+                        'fontSize': '12px',
+                        'fontWeight': 'bold',
+                        'border': '1px solid #72B095',
+                        'backgroundColor': 'transparent',
+                        'color': '#72B095',
+                        'borderRadius': '20px',
+                        'padding': '5px 12px',
+                    }
+                ),
+
+                # F&B Kitchen Toggle Button
+                dbc.Button(
+                    "🍳 F&B Kitchen",
+                    id="btn-toggle-mould-kitchen",
+                    className="home-mould-btn",
+                    style={
+                        'position': 'absolute',
+                        'top': '15px',
+                        'right': '375px',
+                        'fontSize': '12px',
+                        'fontWeight': 'bold',
+                        'border': '1px solid #D84315',
+                        'backgroundColor': 'transparent',
+                        'color': '#D84315',
+                        'borderRadius': '20px',
+                        'padding': '5px 12px',
+                    }
+                ),
+
             html.Br(),
 
             # ---------------------------------------------------
@@ -87,6 +150,7 @@ def get_layout():
                     # Visible typography logo
                     html.Span(
                         "ForgeBI",
+                        id="home-logo-text",
                         style={
                             'fontFamily': '"Outfit", sans-serif',
                             'fontSize': '42px',
@@ -142,22 +206,18 @@ def get_layout():
             html.H1(
 
                 "ForgeBI Business Intelligence Demo",
-
+                id="home-header-title",
                 style={
-
                     'fontWeight': 'bold',
-
                     'textAlign': 'center',
-
                     'color': '#1C1B19'
-
                 }
-
             ),
 
             # Tagline / Disclaimer
             html.Div(
                 "(Since this is a demo, the dashboards might not show figures as expected)",
+                id="home-header-tagline",
                 style={
                     'textAlign': 'center',
                     'fontSize': '14px',
@@ -170,6 +230,7 @@ def get_layout():
             # Mouldable Layout Note
             html.Div(
                 "Completely mouldable. Don't want this layout? We can change it to however you like.",
+                id="home-header-mouldnote",
                 style={
                     'textAlign': 'center',
                     'fontSize': '14px',
@@ -499,6 +560,564 @@ def get_layout():
                 keyboard=True,
                 backdrop=True
             ),
+                    ]
+                ),
+
+                html.Div(
+                    id="fashion-layout-container",
+                    style={'display': 'none'},
+                    className="fashion-layout-wrapper",
+                    children=dbc.Row(
+                        [
+                            # Left Panel Column
+                            dbc.Col(
+                                html.Div(
+                                    [
+                                        html.Div("M A I S O N", className="fashion-brand-sup"),
+                                        html.Div("ATELIER", className="fashion-brand-main"),
+                                        html.Div("ForgeBI OPERATIONAL LEDGER // SS26", className="fashion-brand-sub"),
+                                        html.Hr(style={'borderColor': '#D4AF37', 'borderWidth': '1.5px', 'margin': '2rem 0'}),
+                                        
+                                        html.Div(
+                                            [
+                                                html.Div([
+                                                    html.Span("SEASON SHOWROOM NET REVENUE"),
+                                                    html.Strong("₹4.82 Cr")
+                                                ], className="fashion-stat-item"),
+                                                html.Div([
+                                                    html.Span("ACTIVE COLLECTION SKUs"),
+                                                    html.Strong("184 Items")
+                                                ], className="fashion-stat-item"),
+                                                html.Div([
+                                                    html.Span("ATELIER PRODUCTION RATE"),
+                                                    html.Strong("96.8%")
+                                                ], className="fashion-stat-item"),
+                                                html.Div([
+                                                    html.Span("SUPPLIER LEAD TIME"),
+                                                    html.Strong("4.2 Days")
+                                                ], className="fashion-stat-item"),
+                                            ],
+                                            className="fashion-stats-panel"
+                                        ),
+                                        
+                                        html.Div(
+                                            [
+                                                dbc.Button(
+                                                    "💎 Revert Layout",
+                                                    id="btn-toggle-mould-fashion",
+                                                    className="fashion-control-btn-mould"
+                                                ),
+                                                dbc.Button(
+                                                    "🌙",
+                                                    id="btn-toggle-theme-fashion",
+                                                    className="fashion-control-btn-theme"
+                                                ),
+                                            ],
+                                            className="fashion-controls-group"
+                                        )
+                                    ],
+                                    className="fashion-left-panel"
+                                ),
+                                xs=12, md=4
+                            ),
+                            
+                            # Right Catalog Column
+                            dbc.Col(
+                                html.Div(
+                                    [
+                                        html.H2("THE COLLECTION INDEX", className="fashion-collection-title"),
+                                        
+                                        html.Div(
+                                            [
+                                                # Item 1: Execution Tracker
+                                                html.Div(
+                                                    [
+                                                        html.Span("01 //", className="fashion-number"),
+                                                        html.Div([
+                                                            html.H5("ATELIER EXECUTION BOARD", className="fashion-title"),
+                                                            html.P("Real-time runway launch tracking, milestone targets, and operational status logs.", className="fashion-desc"),
+                                                        ], className="fashion-info"),
+                                                        html.A("Enter Collection Workspace ➔", href="/execution-tracker", target="_blank", className="fashion-link")
+                                                    ],
+                                                    className="fashion-row"
+                                                ) if 'execution-tracker' in allowed_modules else None,
+                                                
+                                                # Item 2: Sales
+                                                html.Div(
+                                                    [
+                                                        html.Span("02 //", className="fashion-number"),
+                                                        html.Div([
+                                                            html.H5("SHOWROOM SALES VELOCITY", className="fashion-title"),
+                                                            html.P("Daily conversion metrics, showroom velocity, and basket analysis.", className="fashion-desc"),
+                                                        ], className="fashion-info"),
+                                                        html.A("Enter Collection Workspace ➔", href="/sales", target="_blank", className="fashion-link")
+                                                    ],
+                                                    className="fashion-row"
+                                                ) if 'sales' in allowed_modules else None,
+                                                
+                                                # Item 3: Inventory
+                                                html.Div(
+                                                    [
+                                                        html.Span("03 //", className="fashion-number"),
+                                                        html.Div([
+                                                            html.H5("GARMENT LOGISTICS & AGING", className="fashion-title"),
+                                                            html.P("Inventory aging index, collection turn rate, and active supply logs.", className="fashion-desc"),
+                                                        ], className="fashion-info"),
+                                                        html.A("Enter Collection Workspace ➔", href="/inventory", target="_blank", className="fashion-link")
+                                                    ],
+                                                    className="fashion-row"
+                                                ) if 'inventory' in allowed_modules else None,
+                                                
+                                                # Item 4: Accounts
+                                                html.Div(
+                                                    [
+                                                        html.Span("04 //", className="fashion-number"),
+                                                        html.Div([
+                                                            html.H5("MAISON FINANCE & LEDGER", className="fashion-title"),
+                                                            html.P("Operational audit, revenue aggregation, and EBITDA forecasts.", className="fashion-desc"),
+                                                        ], className="fashion-info"),
+                                                        html.A("Enter Collection Workspace ➔", href="/accounts", target="_blank", className="fashion-link")
+                                                    ],
+                                                    className="fashion-row"
+                                                ) if 'accounts' in allowed_modules else None,
+                                                
+                                                # Item 5: Procurement
+                                                html.Div(
+                                                    [
+                                                        html.Span("05 //", className="fashion-number"),
+                                                        html.Div([
+                                                            html.H5("FABRICATION & MATERIAL OUTLET", className="fashion-title"),
+                                                            html.P("Raw textile orders, supply pipeline, and design materials tracker.", className="fashion-desc"),
+                                                        ], className="fashion-info"),
+                                                        html.A("Enter Collection Workspace ➔", href="/procurement", target="_blank", className="fashion-link")
+                                                    ],
+                                                    className="fashion-row"
+                                                ) if 'procurement' in allowed_modules else None,
+                                                
+                                                # Item 6: Marketing
+                                                html.Div(
+                                                    [
+                                                        html.Span("06 //", className="fashion-number"),
+                                                        html.Div([
+                                                            html.H5("HAUTE COUTURE CAMPAIGNS", className="fashion-title"),
+                                                            html.P("Brand engagement levels, social catalog conversions, and CAC auditing.", className="fashion-desc"),
+                                                        ], className="fashion-info"),
+                                                        html.A("Enter Collection Workspace ➔", href="/marketing", target="_blank", className="fashion-link")
+                                                    ],
+                                                    className="fashion-row"
+                                                ) if 'marketing' in allowed_modules else None,
+                                                
+                                                # Item 7: Customer Care
+                                                html.Div(
+                                                    [
+                                                        html.Span("07 //", className="fashion-number"),
+                                                        html.Div([
+                                                            html.H5("CLIENT CARE CONCIERGE", className="fashion-title"),
+                                                            html.P("VIP concierge tickets, loyalty conversions, and service speed logs.", className="fashion-desc"),
+                                                        ], className="fashion-info"),
+                                                        html.A("Enter Collection Workspace ➔", href="/customer-care", target="_blank", className="fashion-link")
+                                                    ],
+                                                    className="fashion-row"
+                                                ) if 'customer-care' in allowed_modules else None,
+                                                
+                                                # Item 8: HR
+                                                html.Div(
+                                                    [
+                                                        html.Span("08 //", className="fashion-number"),
+                                                        html.Div([
+                                                            html.H5("ATELIER WORKFORCE & TALENT", className="fashion-title"),
+                                                            html.P("Designers payroll overview, attendance rates, and headcount audits.", className="fashion-desc"),
+                                                        ], className="fashion-info"),
+                                                        html.A("Enter Collection Workspace ➔", href="/hr", target="_blank", className="fashion-link")
+                                                    ],
+                                                    className="fashion-row"
+                                                ) if 'hr' in allowed_modules else None,
+                                                
+                                                # Item 9: Directors Hub
+                                                html.Div(
+                                                    [
+                                                        html.Span("09 //", className="fashion-number"),
+                                                        html.Div([
+                                                            html.H5("EXECUTIVE RUNWAY COCKPIT", className="fashion-title"),
+                                                            html.P("Consolidated executive turnover, brand KPI index, and global health metrics.", className="fashion-desc"),
+                                                        ], className="fashion-info"),
+                                                        html.A("Enter Collection Workspace ➔", href="/directors-hub", target="_blank", className="fashion-link")
+                                                    ],
+                                                    className="fashion-row"
+                                                ) if 'directors-hub' in allowed_modules else None,
+                                                
+                                                # Item 10: Admin Hub
+                                                html.Div(
+                                                    [
+                                                        html.Span("10 //", className="fashion-number"),
+                                                        html.Div([
+                                                            html.H5("MAISON ANALYTICS CORE SETTINGS", className="fashion-title"),
+                                                            html.P("Configure security keys, register brand dashboards, and inspect audit logs.", className="fashion-desc"),
+                                                        ], className="fashion-info"),
+                                                        html.A("Enter Collection Workspace ➔", href="/admin-hub", target="_blank", className="fashion-link")
+                                                    ],
+                                                    className="fashion-row"
+                                                ) if 'admin-hub' in allowed_modules else None,
+                                            ],
+                                            className="fashion-catalog-list"
+                                        )
+                                    ],
+                                    className="fashion-right-panel"
+                                ),
+                                xs=12, md=8
+                            )
+                        ]
+                    )
+                ),
+
+                html.Div(
+                    id="factory-layout-container",
+                    style={'display': 'none'},
+                    className="factory-layout-wrapper",
+                    children=dbc.Row(
+                        [
+                            # Left Column: Telemetry Billboard
+                            dbc.Col(
+                                html.Div(
+                                    [
+                                        html.Div("SYSTEM CORE", className="factory-tag"),
+                                        html.Div("FORGE_IND", className="factory-brand-main"),
+                                        html.Div("INDUSTRIAL HUD CONSOLE v2.6", className="factory-brand-sub"),
+                                        html.Hr(style={'borderColor': '#00E676', 'borderWidth': '1px', 'margin': '1.5rem 0'}),
+                                        
+                                        html.Div(
+                                            [
+                                                html.Div([
+                                                    html.Span("OEE (EQUIPMENT EFFECTIVENESS)"),
+                                                    html.Strong("87.4%"),
+                                                    html.Div(className="factory-progress-bar", children=html.Div(className="factory-progress-fill", style={'width': '87.4%'}))
+                                                ], className="factory-telemetry-item"),
+                                                html.Div([
+                                                    html.Span("ACTIVE ASSEMBLY LINES"),
+                                                    html.Strong("8 / 8 ACTIVE"),
+                                                    html.Div(className="factory-progress-bar", children=html.Div(className="factory-progress-fill", style={'width': '100%'}))
+                                                ], className="factory-telemetry-item"),
+                                                html.Div([
+                                                    html.Span("DAILY TARGET PROGRESS"),
+                                                    html.Strong("3,842 / 4,820 Unit"),
+                                                    html.Div(className="factory-progress-bar", children=html.Div(className="factory-progress-fill", style={'width': '79.7%'}))
+                                                ], className="factory-telemetry-item"),
+                                                html.Div([
+                                                    html.Span("FLOOR INCIDENT RECORD"),
+                                                    html.Strong("420 DAYS CLEAR"),
+                                                ], className="factory-telemetry-item"),
+                                            ],
+                                            className="factory-telemetry-panel"
+                                        ),
+                                        
+                                        html.Div(
+                                            [
+                                                dbc.Button(
+                                                    "🔌 Return to Control Core",
+                                                    id="btn-toggle-mould-factory-back",
+                                                    className="factory-control-btn me-2"
+                                                ),
+                                                dbc.Button(
+                                                    "🌙",
+                                                    id="btn-toggle-theme-factory",
+                                                    className="factory-control-btn-theme"
+                                                ),
+                                            ],
+                                            className="factory-controls-group"
+                                        )
+                                    ],
+                                    className="factory-left-panel"
+                                ),
+                                xs=12, md=3
+                            ),
+                            
+                            # Center Column: Operations Hub Cards
+                            dbc.Col(
+                                html.Div(
+                                    [
+                                        html.H3("MACHINERY & CONTROL MODULES", className="factory-section-title"),
+                                        dbc.Row(
+                                            [
+                                                # Module 1: Execution Tracker -> Assembly Line Status
+                                                dbc.Col(
+                                                    html.Div(
+                                                        [
+                                                            html.Div("SYS_NODE_01", className="factory-node-id"),
+                                                            html.H4("⚙️ Assembly Line Status", className="factory-card-title"),
+                                                            html.P("Monitor floor tasks, active workflow backlogs, and target speeds.", className="factory-card-desc"),
+                                                            html.A(dbc.Button("LAUNCH CONSOLE", className="factory-card-btn"), href="/execution-tracker", target="_blank")
+                                                        ],
+                                                        className="factory-card"
+                                                    ),
+                                                    xs=12, sm=6, md=6, lg=4
+                                                ) if 'execution-tracker' in allowed_modules else None,
+                                                
+                                                # Module 2: Inventory -> Parts Inventory
+                                                dbc.Col(
+                                                    html.Div(
+                                                        [
+                                                            html.Div("SYS_NODE_02", className="factory-node-id"),
+                                                            html.H4("📦 Logistics & Inventory", className="factory-card-title"),
+                                                            html.P("Raw material stock counts, shipping orders, and turnaround index.", className="factory-card-desc"),
+                                                            html.A(dbc.Button("LAUNCH CONSOLE", className="factory-card-btn"), href="/inventory", target="_blank")
+                                                        ],
+                                                        className="factory-card"
+                                                    ),
+                                                    xs=12, sm=6, md=6, lg=4
+                                                ) if 'inventory' in allowed_modules else None,
+                                                
+                                                # Module 3: Procurement -> Material Inputs
+                                                dbc.Col(
+                                                    html.Div(
+                                                        [
+                                                            html.Div("SYS_NODE_03", className="factory-node-id"),
+                                                            html.H4("🏭 Material Raw Inputs", className="factory-card-title"),
+                                                            html.P("Fabrication vendor lead times, quality audits, and procurement logs.", className="factory-card-desc"),
+                                                            html.A(dbc.Button("LAUNCH CONSOLE", className="factory-card-btn"), href="/procurement", target="_blank")
+                                                        ],
+                                                        className="factory-card"
+                                                    ),
+                                                    xs=12, sm=6, md=6, lg=4
+                                                ) if 'procurement' in allowed_modules else None,
+
+                                                # Module 4: Sales -> Showroom Velocity
+                                                dbc.Col(
+                                                    html.Div(
+                                                        [
+                                                            html.Div("SYS_NODE_04", className="factory-node-id"),
+                                                            html.H4("📊 Showroom Sales Velocity", className="factory-card-title"),
+                                                            html.P("Shipment distributions, dealer purchase conversions, and revenue analysis.", className="factory-card-desc"),
+                                                            html.A(dbc.Button("LAUNCH CONSOLE", className="factory-card-btn"), href="/sales", target="_blank")
+                                                        ],
+                                                        className="factory-card"
+                                                    ),
+                                                    xs=12, sm=6, md=6, lg=4
+                                                ) if 'sales' in allowed_modules else None,
+
+                                                # Module 5: Accounts -> Costing Analysis
+                                                dbc.Col(
+                                                    html.Div(
+                                                        [
+                                                            html.Div("SYS_NODE_05", className="factory-node-id"),
+                                                            html.H4("📉 Ledger & Cost Analysis", className="factory-card-title"),
+                                                            html.P("Operation expenditures, asset audits, and operational EBITDA ledger.", className="factory-card-desc"),
+                                                            html.A(dbc.Button("LAUNCH CONSOLE", className="factory-card-btn"), href="/accounts", target="_blank")
+                                                        ],
+                                                        className="factory-card"
+                                                    ),
+                                                    xs=12, sm=6, md=6, lg=4
+                                                ) if 'accounts' in allowed_modules else None,
+
+                                                # Module 6: Directors Hub -> Control Room
+                                                dbc.Col(
+                                                    html.Div(
+                                                        [
+                                                            html.Div("SYS_NODE_06", className="factory-node-id"),
+                                                            html.H4("🎛️ Control Room Telemetry", className="factory-card-title"),
+                                                            html.P("Consolidated operation scorecards, global factory KPI dials.", className="factory-card-desc"),
+                                                            html.A(dbc.Button("LAUNCH CONSOLE", className="factory-card-btn"), href="/directors-hub", target="_blank")
+                                                        ],
+                                                        className="factory-card"
+                                                    ),
+                                                    xs=12, sm=6, md=6, lg=4
+                                                ) if 'directors-hub' in allowed_modules else None,
+                                            ]
+                                        )
+                                    ],
+                                    className="factory-center-panel"
+                                ),
+                                xs=12, md=6
+                            ),
+                            
+                            # Right Column: System Terminal Logs
+                            dbc.Col(
+                                html.Div(
+                                    [
+                                        html.H3("LIVE CONSOLE LOGGER", className="factory-section-title"),
+                                        html.Div(
+                                            [
+                                                html.Div(">> INITIATING SYSTEM TELEMETRY...", className="factory-log-line green"),
+                                                html.Div(">> NODE_01: ONLINE [ASSEMBLY_LINE_STATUS]", className="factory-log-line"),
+                                                html.Div(">> NODE_02: ONLINE [LOGISTICS_PARTS_INVENTORY]", className="factory-log-line"),
+                                                html.Div(">> NODE_03: ONLINE [MATERIAL_RAW_INPUTS]", className="factory-log-line"),
+                                                html.Div(">> 00:36:12 - LINE 1: ASSEMBLY CYCLE COMPLETED", className="factory-log-line"),
+                                                html.Div(">> 00:41:45 - LINE 3: PARTS STOCK VERIFIED", className="factory-log-line"),
+                                                html.Div(">> 00:48:02 - OUTLET 2: PACKAGING BUNDLE LOCKED", className="factory-log-line"),
+                                                html.Div(">> 00:52:10 - LOGISTICS: FREIGHT TRANSIT DEPLOYED", className="factory-log-line orange"),
+                                                html.Div(">> 00:55:18 - LINE 2: OEE RATE CALIBRATED [87.4%]", className="factory-log-line green"),
+                                                html.Div(">> 01:02:40 - ASSEMBLY: TARGET LEVEL 79.7% REACHED", className="factory-log-line"),
+                                                html.Div(">> 01:05:12 - SAFETY SENSORS: NOMINAL STABILITY", className="factory-log-line green"),
+                                                html.Div(">> 01:10:04 - DATABASE SNAPSHOT UPLOAD SUCCESSFUL", className="factory-log-line green"),
+                                                html.Div(">> SYSTEM RUNNING IN STEADY STATE...", className="factory-log-line green blinking"),
+                                            ],
+                                            className="factory-terminal-logs"
+                                        )
+                                    ],
+                                    className="factory-right-panel"
+                                ),
+                                xs=12, md=3
+                            )
+                        ]
+                    )
+                ),
+
+                html.Div(
+                    id="kitchen-layout-container",
+                    style={'display': 'none'},
+                    className="kitchen-layout-wrapper",
+                    children=dbc.Row(
+                        [
+                            # Left Column: Bistro Sidebar Panel
+                            dbc.Col(
+                                html.Div(
+                                    [
+                                        html.Div("FORGE KITCHEN", className="kitchen-brand-main"),
+                                        html.Div("F&B OPERATIONS CONSOLE // ACTIVE", className="kitchen-brand-sub"),
+                                        html.Hr(style={'borderColor': '#E65100', 'borderWidth': '1px', 'margin': '1.5rem 0'}),
+                                        
+                                        html.Div(
+                                            [
+                                                html.Div([
+                                                    html.Span("🍳 LIVE STATIONS ACTIVE"),
+                                                    html.Strong("142 Orders")
+                                                ], className="kitchen-stat-item"),
+                                                html.Div([
+                                                    html.Span("⏱️ AVERAGE PREPARATION TIME"),
+                                                    html.Strong("12.4 Mins")
+                                                ], className="kitchen-stat-item"),
+                                                html.Div([
+                                                    html.Span("⭐ CLIENT SATISFACTION (CSAT)"),
+                                                    html.Strong("94.6%")
+                                                ], className="kitchen-stat-item"),
+                                                html.Div([
+                                                    html.Span("🌾 WASTE REDUCTION INDEX"),
+                                                    html.Strong("98.2%")
+                                                ], className="kitchen-stat-item"),
+                                            ],
+                                            className="kitchen-stats-panel"
+                                        ),
+                                        
+                                        html.Div(
+                                            [
+                                                dbc.Button(
+                                                    "🍳 Return to Kitchen Core",
+                                                    id="btn-toggle-mould-kitchen-back",
+                                                    className="kitchen-control-btn me-2"
+                                                ),
+                                                dbc.Button(
+                                                    "🌙",
+                                                    id="btn-toggle-theme-kitchen",
+                                                    className="kitchen-control-btn-theme"
+                                                ),
+                                            ],
+                                            className="kitchen-controls-group"
+                                        )
+                                    ],
+                                    className="kitchen-left-panel"
+                                ),
+                                xs=12, md=3
+                            ),
+                            
+                            # Right Column: Kitchen Station Board
+                            dbc.Col(
+                                html.Div(
+                                    [
+                                        html.H3("ACTIVE KITCHEN STATIONS", className="kitchen-section-title"),
+                                        dbc.Row(
+                                            [
+                                                # Station 1: Sourcing (Procurement)
+                                                dbc.Col(
+                                                    html.Div(
+                                                        [
+                                                            html.Div("STATION // 01", className="kitchen-station-id"),
+                                                            html.H4("🌾 Pantry Sourcing", className="kitchen-card-title"),
+                                                            html.P("Ingredient suppliers lead times, fresh stock orders, and quality logs.", className="kitchen-card-desc"),
+                                                            html.A(dbc.Button("OPEN STATION", className="kitchen-card-btn"), href="/procurement", target="_blank")
+                                                        ],
+                                                        className="kitchen-card"
+                                                    ),
+                                                    xs=12, sm=6, md=6, lg=4
+                                                ) if 'procurement' in allowed_modules else None,
+                                                
+                                                # Station 2: Stock (Inventory)
+                                                dbc.Col(
+                                                    html.Div(
+                                                        [
+                                                            html.Div("STATION // 02", className="kitchen-station-id"),
+                                                            html.H4("🥩 Cold Storage & Stock", className="kitchen-card-title"),
+                                                            html.P("Cold room inventory counts, stock expiration tracking, and buffer limits.", className="kitchen-card-desc"),
+                                                            html.A(dbc.Button("OPEN STATION", className="kitchen-card-btn"), href="/inventory", target="_blank")
+                                                        ],
+                                                        className="kitchen-card"
+                                                    ),
+                                                    xs=12, sm=6, md=6, lg=4
+                                                ) if 'inventory' in allowed_modules else None,
+                                                
+                                                # Station 3: Tickets (Execution Tracker)
+                                                dbc.Col(
+                                                    html.Div(
+                                                        [
+                                                            html.Div("STATION // 03", className="kitchen-station-id"),
+                                                            html.H4("👨‍🍳 Kitchen Prep Ticket Line", className="kitchen-card-title"),
+                                                            html.P("Active prep sheets, chefs workstation assignment, and launch milestones.", className="kitchen-card-desc"),
+                                                            html.A(dbc.Button("OPEN STATION", className="kitchen-card-btn"), href="/execution-tracker", target="_blank")
+                                                        ],
+                                                        className="kitchen-card"
+                                                    ),
+                                                    xs=12, sm=6, md=6, lg=4
+                                                ) if 'execution-tracker' in allowed_modules else None,
+
+                                                # Station 4: Revenue (Accounts)
+                                                dbc.Col(
+                                                    html.Div(
+                                                        [
+                                                            html.Div("STATION // 04", className="kitchen-station-id"),
+                                                            html.H4("💰 Buffet Cost & Revenue", className="kitchen-card-title"),
+                                                            html.P("Daily ledger audits, restaurant cost margins, and recipe EBITDA index.", className="kitchen-card-desc"),
+                                                            html.A(dbc.Button("OPEN STATION", className="kitchen-card-btn"), href="/accounts", target="_blank")
+                                                        ],
+                                                        className="kitchen-card"
+                                                    ),
+                                                    xs=12, sm=6, md=6, lg=4
+                                                ) if 'accounts' in allowed_modules else None,
+
+                                                # Station 5: POS Logs (Sales)
+                                                dbc.Col(
+                                                    html.Div(
+                                                        [
+                                                            html.Div("STATION // 05", className="kitchen-station-id"),
+                                                            html.H4("🍔 POS Order Logs", className="kitchen-card-title"),
+                                                            html.P("Table bills summary, MTD sales comparisons, and checkout velocity.", className="kitchen-card-desc"),
+                                                            html.A(dbc.Button("OPEN STATION", className="kitchen-card-btn"), href="/sales", target="_blank")
+                                                        ],
+                                                        className="kitchen-card"
+                                                    ),
+                                                    xs=12, sm=6, md=6, lg=4
+                                                ) if 'sales' in allowed_modules else None,
+
+                                                # Station 6: Group Cockpit (Directors Hub)
+                                                dbc.Col(
+                                                    html.Div(
+                                                        [
+                                                            html.Div("STATION // 06", className="kitchen-station-id"),
+                                                            html.H4("🍷 Restaurant Group Cockpit", className="kitchen-card-title"),
+                                                            html.P("Aggregated franchisee scorecards and global hospitality indicators.", className="kitchen-card-desc"),
+                                                            html.A(dbc.Button("OPEN STATION", className="kitchen-card-btn"), href="/directors-hub", target="_blank")
+                                                        ],
+                                                        className="kitchen-card"
+                                                    ),
+                                                    xs=12, sm=6, md=6, lg=4
+                                                ) if 'directors-hub' in allowed_modules else None,
+                                            ]
+                                        )
+                                    ],
+                                    className="kitchen-right-panel"
+                                ),
+                                xs=12, md=9
+                            )
+                        ]
+                    )
+                ),
 
             # System Control Panel (Offcanvas)
             dbc.Offcanvas(
@@ -878,27 +1497,139 @@ def toggle_offcanvas(n_clicks, is_open):
 
 
 # ---------------------------------------------------
-# Theme Toggle Callback
+# Theme & Mould Toggle Callback
 # ---------------------------------------------------
 
 @callback(
     Output("home-layout-wrapper", "className"),
     Output("btn-toggle-theme", "children"),
+    Output("btn-toggle-theme-fashion", "children"),
+    Output("btn-toggle-theme-factory", "children"),
+    Output("btn-toggle-theme-kitchen", "children"),
     Output("home-theme-store", "data"),
     Output("home-logo", "src"),
     Output("search-dashboards-modal", "contentClassName"),
+    Output("home-mould-store", "data"),
+    Output("btn-toggle-mould", "children"),
+    Output("btn-toggle-mould-fashion", "children"),
+    Output("btn-toggle-mould-factory", "children"),
+    Output("btn-toggle-mould-factory-back", "children"),
+    Output("btn-toggle-mould-kitchen", "children"),
+    Output("btn-toggle-mould-kitchen-back", "children"),
+    Output("default-layout-container", "style"),
+    Output("fashion-layout-container", "style"),
+    Output("factory-layout-container", "style"),
+    Output("kitchen-layout-container", "style"),
+    Output("home-header-title", "children"),
+    Output("home-header-tagline", "children"),
+    Output("home-header-mouldnote", "children"),
+    Output("home-logo-text", "children"),
     Input("btn-toggle-theme", "n_clicks"),
+    Input("btn-toggle-theme-fashion", "n_clicks"),
+    Input("btn-toggle-theme-factory", "n_clicks"),
+    Input("btn-toggle-theme-kitchen", "n_clicks"),
+    Input("btn-toggle-mould", "n_clicks"),
+    Input("btn-toggle-mould-fashion", "n_clicks"),
+    Input("btn-toggle-mould-factory", "n_clicks"),
+    Input("btn-toggle-mould-factory-back", "n_clicks"),
+    Input("btn-toggle-mould-kitchen", "n_clicks"),
+    Input("btn-toggle-mould-kitchen-back", "n_clicks"),
     State("home-theme-store", "data"),
+    State("home-mould-store", "data"),
     prevent_initial_call=True
 )
-def toggle_theme(n_clicks, current_theme):
-    if not n_clicks:
-        return "inv-premium-page-gold", "🌙", "light", "/assets/orient_logo.png", "search-modal-content-light"
+def handle_workspace_controls(theme_clicks, theme_fashion_clicks, theme_factory_clicks, theme_kitchen_clicks, mould_clicks, mould_fashion_clicks, mould_factory_clicks, mould_factory_back_clicks, mould_kitchen_clicks, mould_kitchen_back_clicks, current_theme, current_mould):
+    from dash import callback_context
+    ctx = callback_context
+    if not ctx.triggered:
+        return (
+            "inv-premium-page-gold", "🌙", "🌙", "🌙", "🌙", "light", 
+            "/assets/orient_logo.png", "search-modal-content-light",
+            "default", "✨ Atelier Workspace", "💎 Revert Layout", "🏭 Factory Workspace", "🔌 Return to Control Core", "🍳 F&B Kitchen", "🍳 Return to Kitchen Core",
+            {'display': 'block'}, {'display': 'none'}, {'display': 'none'}, {'display': 'none'},
+            "ForgeBI Business Intelligence Demo",
+            "(Since this is a demo, the dashboards might not show figures as expected)",
+            "Completely mouldable. Don't want this layout? We can change it to however you like.",
+            "ForgeBI"
+        )
+        
+    trigger_id = ctx.triggered[0]['prop_id'].split('.')[0]
     
-    if current_theme == "light":
-        return "inv-premium-page-gold-dark", "☀️", "dark", "/assets/orient_logo_for_dark_theme.png", "search-modal-content-dark"
+    new_theme = current_theme
+    new_mould = current_mould
+    
+    # Theme Toggles
+    if trigger_id in ["btn-toggle-theme", "btn-toggle-theme-fashion", "btn-toggle-theme-factory", "btn-toggle-theme-kitchen"]:
+        new_theme = "dark" if current_theme == "light" else "light"
+        
+    # Workspace Layout Toggles
+    elif trigger_id == "btn-toggle-mould":
+        new_mould = "fashion"
+    elif trigger_id == "btn-toggle-mould-fashion":
+        new_mould = "default"
+    elif trigger_id == "btn-toggle-mould-factory":
+        new_mould = "factory"
+    elif trigger_id == "btn-toggle-mould-factory-back":
+        new_mould = "default"
+    elif trigger_id == "btn-toggle-mould-kitchen":
+        new_mould = "kitchen"
+    elif trigger_id == "btn-toggle-mould-kitchen-back":
+        new_mould = "default"
+        
+    # Build className
+    wrapper_class = "inv-premium-page-gold" if new_theme == "light" else "inv-premium-page-gold-dark"
+    if new_mould == "fashion":
+        wrapper_class += " fashion-workspace"
+    elif new_mould == "factory":
+        wrapper_class += " factory-workspace"
+    elif new_mould == "kitchen":
+        wrapper_class += " kitchen-workspace"
+        
+    theme_btn_label = "🌙" if new_theme == "light" else "☀️"
+    logo_src = "/assets/orient_logo.png" if new_theme == "light" else "/assets/orient_logo_for_dark_theme.png"
+    modal_class = "search-modal-content-light" if new_theme == "light" else "search-modal-content-dark"
+    
+    # Styles for containers
+    default_style = {'display': 'none'}
+    fashion_style = {'display': 'none'}
+    factory_style = {'display': 'none'}
+    kitchen_style = {'display': 'none'}
+    
+    if new_mould == "fashion":
+        fashion_style = {'display': 'block'}
+    elif new_mould == "factory":
+        factory_style = {'display': 'block'}
+    elif new_mould == "kitchen":
+        kitchen_style = {'display': 'block'}
     else:
-        return "inv-premium-page-gold", "🌙", "light", "/assets/orient_logo.png", "search-modal-content-light"
+        default_style = {'display': 'block'}
+        
+    title = "ForgeBI Business Intelligence Demo"
+    tagline = "(Since this is a demo, the dashboards might not show figures as expected)"
+    mouldnote = "Completely mouldable. Don't want this layout? We can change it to however you like."
+    logo_text = "ForgeBI"
+    
+    if new_mould == "fashion":
+        title = "ATELIER ForgeBI // Executive Analytics Hub"
+        tagline = "(Demo Mode - Showroom metrics and ledger updates are simulated)"
+        mouldnote = "Bespoke Workspace. Custom editorial styling mapped to your brand's digital ecosystem."
+        logo_text = "ATELIER"
+    elif new_mould == "factory":
+        title = "FORGE INDUSTRIAL // CORE CONSOLE"
+        tagline = "(SYSTEM TELEMETRY - Simulated Factory Run Logs)"
+        mouldnote = "Industrial HUD Console. Engineered for high-throughput floor management and real-time operations."
+        logo_text = "FORGE_IND"
+    elif new_mould == "kitchen":
+        title = "FORGE KITCHEN // F&B HUB"
+        tagline = "(KITCHEN OPERATIONS - Real-Time Station Preparation Speeds)"
+        mouldnote = "Food & Beverage Station Console. Configured for culinary chain workflows, cost margin audits, and logistics."
+        logo_text = "FORGE_FB"
+        
+    return (
+        wrapper_class, theme_btn_label, theme_btn_label, theme_btn_label, theme_btn_label, new_theme, 
+        logo_src, modal_class, new_mould, "✨ Atelier Workspace", "💎 Revert Layout", "🏭 Factory Workspace", "🔌 Return to Control Core", "🍳 F&B Kitchen", "🍳 Return to Kitchen Core",
+        default_style, fashion_style, factory_style, kitchen_style, title, tagline, mouldnote, logo_text
+    )
 
 
 # ---------------------------------------------------

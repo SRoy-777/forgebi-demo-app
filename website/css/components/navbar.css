@@ -4,7 +4,7 @@
 
 .navbar {
     position: fixed;
-    top: 0;
+    top: 40px;
     left: 0;
     width: 100%;
     height: var(--navbar-height);
@@ -16,11 +16,53 @@
 
 /* Blur & Color changes on Scroll */
 .navbar.scrolled {
+    top: 0;
     background-color: rgba(250, 248, 245, 0.75);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(200, 160, 77, 0.08);
     height: 72px; /* slightly slim down navbar */
+}
+
+/* Announcement Bar Styles */
+.announcement-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: radial-gradient(circle at top right, #1E352F, #12201C); /* Deep green */
+    color: #FFF;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    z-index: 1001;
+    border-bottom: 1px solid rgba(114, 176, 149, 0.2);
+}
+
+.announcement-badge {
+    background-color: rgba(114, 176, 149, 0.2);
+    color: #72B095;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.announcement-link {
+    color: var(--color-accent-gold) !important;
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition-smooth);
+}
+
+.announcement-link:hover {
+    text-decoration: underline;
+    opacity: 0.9;
 }
 
 .nav-container {

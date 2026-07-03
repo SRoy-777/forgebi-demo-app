@@ -27,12 +27,20 @@
     <link rel="stylesheet" href="/website-assets/css/components/features.css">
     <link rel="stylesheet" href="/website-assets/css/components/showcase.css">
     <link rel="stylesheet" href="/website-assets/css/components/timeline.css">
+    <link rel="stylesheet" href="/website-assets/css/components/sync-agent.css">
     <link rel="stylesheet" href="/website-assets/css/components/security.css">
     <link rel="stylesheet" href="/website-assets/css/components/performance.css">
     <link rel="stylesheet" href="/website-assets/css/components/cta.css">
     <link rel="stylesheet" href="/website-assets/css/components/footer.css">
 </head>
 <body>
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <span class="announcement-badge">LAUNCH OFFER</span>
+        <span class="announcement-text">Get 1 month absolutely free trial of our Sync Agent & 3 dashboards.</span>
+        <a href="#sync-agent" class="announcement-link">Claim Free Trial ➔</a>
+    </div>
 
     <!-- Sticky Navbar -->
     <nav class="navbar" id="navbar">
@@ -394,6 +402,256 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forge Sync Agent™ Section -->
+    <section class="sync-agent-section" id="sync-agent">
+        <div class="container">
+            <div class="sync-agent-panel fade-in-up">
+                <!-- Section Header -->
+                <div class="sync-agent-header">
+                    <span class="section-tag">Enterprise Synchronization</span>
+                    <h2 class="sync-agent-title">Forge Sync Agent™</h2>
+                    <h3 style="color: var(--color-accent-gold); margin-top: -0.5rem; font-weight: 800; font-size: 1.6rem;">Your ERP Doesn't Have APIs? <span style="color: var(--color-text-primary)">No Problem.</span></h3>
+                    <p class="sync-agent-subtitle">
+                        Not every ERP system is built with modern APIs. Many organizations still rely on daily Excel exports, legacy software, or vendor-controlled systems. Forge Sync Agent™ eliminates this dependency. Simply export your reports, place them into a designated folder, click <strong>Sync</strong>, and ForgeBI automatically updates your entire analytics platform.
+                    </p>
+                </div>
+
+                <!-- Split Grid -->
+                <div class="sync-agent-grid">
+                    <!-- Left Column: Sequential Stepper -->
+                    <div class="workflow-container">
+                        <div class="flow-line-track"></div>
+                        <div class="flow-line-pulse"></div>
+                        <div class="workflow-steps">
+                            <div class="flow-step">
+                                <div class="flow-step-icon">🏢</div>
+                                <div class="flow-step-info">
+                                    <h5>ERP System</h5>
+                                    <p>Legacy software or offline platform database</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-step-icon">📤</div>
+                                <div class="flow-step-info">
+                                    <h5>Export Daily Reports</h5>
+                                    <p>Standard data extractions in Excel/CSV format</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-step-icon">📥</div>
+                                <div class="flow-step-info">
+                                    <h5>Drop Files into ForgeBI Dump Folder</h5>
+                                    <p>Secure local folder monitored by Sync Agent</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-step-icon">🖱️</div>
+                                <div class="flow-step-info">
+                                    <h5>Click Forge Sync™</h5>
+                                    <p>Trigger update sequence with a single click</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-step-icon">🛡️</div>
+                                <div class="flow-step-info">
+                                    <h5>Automatic Validation</h5>
+                                    <p>Integrity check for schema columns and missing data</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-step-icon">⚡</div>
+                                <div class="flow-step-info">
+                                    <h5>ETL Processing</h5>
+                                    <p>Data normalization, joins, and indexing pipeline</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-step-icon">💾</div>
+                                <div class="flow-step-info">
+                                    <h5>Data Warehouse Update</h5>
+                                    <p>Update aggregated datasets in the system database</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-step-icon">📦</div>
+                                <div class="flow-step-info">
+                                    <h5>Snapshot Generation</h5>
+                                    <p>Export compressed parquet binaries for speed</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-step-icon">☁️</div>
+                                <div class="flow-step-info">
+                                    <h5>Secure Cloud Sync</h5>
+                                    <p>Upload encrypted snapshots to application storage</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-step-icon">🎯</div>
+                                <div class="flow-step-info">
+                                    <h5>Dashboards Updated</h5>
+                                    <p>Visualizations refreshed instantly for decision makers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Windows Desktop Application Mockup -->
+                    <div class="mock-app-window">
+                        <!-- Cursor -->
+                        <svg class="mock-cursor-img" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.5 3V17.5L8.9 13.1L13.8 21.5L16.8 19.8L11.9 11.4L17.2 11.1L4.5 3Z" fill="#1C1B19" stroke="#FFF" stroke-width="1.5"/>
+                        </svg>
+
+                        <!-- Title Bar -->
+                        <div class="app-titlebar">
+                            <div class="app-window-controls">
+                                <span class="control-dot close"></span>
+                                <span class="control-dot minimize"></span>
+                                <span class="control-dot maximize"></span>
+                            </div>
+                            <div class="app-window-title">Forge Sync Agent</div>
+                            <div style="width: 48px;"></div>
+                        </div>
+
+                        <!-- App Body -->
+                        <div class="app-body">
+                            <!-- Checking Pane -->
+                            <div class="checking-pane pane-checking">
+                                <button class="mock-sync-btn">Sync Now</button>
+                                
+                                <div class="mock-files-list">
+                                    <div class="file-row"><span class="check-icon">✓</span> Sales.xlsx</div>
+                                    <div class="file-row"><span class="check-icon">✓</span> Customers.xlsx</div>
+                                    <div class="file-row"><span class="check-icon">✓</span> Inventory.xlsx</div>
+                                    <div class="file-row"><span class="check-icon">✓</span> Schemes.xlsx</div>
+                                    <div class="file-row"><span class="check-icon">✓</span> Vendor.xlsx</div>
+                                </div>
+
+                                <div class="mock-validation-section">
+                                    <div class="validation-header">
+                                        <span>Validating Files...</span>
+                                        <span>82%</span>
+                                    </div>
+                                    <div class="progress-bar-track">
+                                        <div class="progress-bar-fill"></div>
+                                    </div>
+                                    <div class="task-info-grid">
+                                        <div>
+                                            <div class="task-label">Current Task:</div>
+                                            <div class="task-value">Uploading Snapshot...</div>
+                                        </div>
+                                        <div style="text-align: right;">
+                                            <div class="task-label">Estimated Time:</div>
+                                            <div class="task-value">08 Minutes</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Success Pane -->
+                            <div class="success-pane pane-success">
+                                <div class="success-icon-container">✓</div>
+                                <h4 class="success-title">Synchronization Successful</h4>
+                                <p class="success-desc">Dashboards Updated Successfully</p>
+                                <div class="success-metadata">
+                                    <div class="success-meta-label">Last Updated</div>
+                                    <div class="success-meta-value">Today 09:42 AM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Cards (Six Premium Cards) -->
+                <div class="sync-features-grid">
+                    <div class="why-card glass-card">
+                        <div class="why-card-icon-container">🎛️</div>
+                        <h4 class="why-card-title">Zero Technical Knowledge</h4>
+                        <p class="why-card-text">Business users simply export reports and click Sync. No coding. No SQL queries. No command-line scripting required.</p>
+                    </div>
+                    <div class="why-card glass-card">
+                        <div class="why-card-icon-container">🛡️</div>
+                        <h4 class="why-card-title">Automatic Validation</h4>
+                        <p class="why-card-text">Checks every file structure before execution. Missing parameters or incorrect formats are detected and flagged immediately.</p>
+                    </div>
+                    <div class="why-card glass-card">
+                        <div class="why-card-icon-container">⚡</div>
+                        <h4 class="why-card-title">Complete Automation</h4>
+                        <p class="why-card-text">Runs ETL, updates the database, rebuilds optimized datasets, and refreshes the dashboard view automatically.</p>
+                    </div>
+                    <div class="why-card glass-card">
+                        <div class="why-card-icon-container">⏳</div>
+                        <h4 class="why-card-title">Works with Legacy ERP</h4>
+                        <p class="why-card-text">Perfect for enterprises where APIs are missing, restricted, or where vendor support requires heavy fees.</p>
+                    </div>
+                    <div class="why-card glass-card">
+                        <div class="why-card-icon-container">🔒</div>
+                        <h4 class="why-card-title">Secure Processing</h4>
+                        <p class="why-card-text">Data is validated locally before transmission, ensuring no corrupted schema updates make it to production views.</p>
+                    </div>
+                    <div class="why-card glass-card">
+                        <div class="why-card-icon-container">🚀</div>
+                        <h4 class="why-card-title">Future Ready</h4>
+                        <p class="why-card-text">When direct API access becomes available, ForgeBI seamlessly migrates from the Sync Agent to live database webhooks.</p>
+                    </div>
+                </div>
+
+                <!-- Comparison Cards Section -->
+                <div class="sync-comparison-section">
+                    <div class="sync-comparison-header">
+                        <h4>How We Compare</h4>
+                    </div>
+                    <div class="sync-comparison-grid">
+                        <div class="comp-card traditional">
+                            <h5 class="comp-card-title">Traditional BI Implementation</h5>
+                            <ul class="comp-list">
+                                <li class="comp-item"><span class="comp-item-marker">❌</span> Wait for ERP Vendor</li>
+                                <li class="comp-item"><span class="comp-item-marker">❌</span> API Development Required</li>
+                                <li class="comp-item"><span class="comp-item-marker">❌</span> Months of Delay</li>
+                                <li class="comp-item"><span class="comp-item-marker">❌</span> High Integration Cost</li>
+                                <li class="comp-item"><span class="comp-item-marker">❌</span> Heavy IT Dependency</li>
+                            </ul>
+                        </div>
+                        <div class="comp-card forge-agent">
+                            <h5 class="comp-card-title">Forge Sync Agent™</h5>
+                            <ul class="comp-list">
+                                <li class="comp-item"><span class="comp-item-marker">✓</span> Export Reports</li>
+                                <li class="comp-item"><span class="comp-item-marker">✓</span> Drop into Folder</li>
+                                <li class="comp-item"><span class="comp-item-marker">✓</span> Click Sync</li>
+                                <li class="comp-item"><span class="comp-item-marker">✓</span> Dashboards Updated</li>
+                                <li class="comp-item"><span class="comp-item-marker">✓</span> Ready in Minutes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Callout Banner -->
+                <div class="sync-callout-banner">
+                    <h3 class="callout-title">Designed for Real Businesses</h3>
+                    <p class="callout-subtext">
+                        Not every organization has modern ERP integrations. ForgeBI adapts to your existing systems instead of forcing expensive and complex ERP modifications.
+                    </p>
+                </div>
+
+                <!-- Promo Trial Offer -->
+                <div class="sync-promo-banner">
+                    <div class="promo-tag">LIMITED TIME TRIAL LAUNCH</div>
+                    <h3 class="promo-title">Get 1 Month Absolutely Free</h3>
+                    <p class="promo-description">
+                        We will establish our <strong>Forge Sync Agent™</strong> in your system. Experience <strong>3 custom dashboards</strong> & the complete UI experience for a month straight with all features enabled—including Row Level Security (RLS), full data exports, and dedicated support. Zero commitments. If you don't like it, no questions asked.
+                    </p>
+                    <div class="promo-features-row">
+                        <span class="promo-feat-badge">⚡ 3 Custom Dashboards</span>
+                        <span class="promo-feat-badge">🛡️ Row Level Security (RLS)</span>
+                        <span class="promo-feat-badge">📤 Export Enabled</span>
+                        <span class="promo-feat-badge">🤝 Full Support</span>
                     </div>
                 </div>
             </div>
@@ -830,6 +1088,8 @@
             </div>
         </div>
     </section>
+
+
 
     <!-- Security Section -->
     <section class="security-section" id="security">

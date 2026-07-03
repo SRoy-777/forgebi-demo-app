@@ -132,6 +132,9 @@ app.index_string = '''
         {%metas%}
         <title>{%title%}</title>
         <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400;500;700&family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;800&display=swap" rel="stylesheet">
         {%css%}
     </head>
     <body>
